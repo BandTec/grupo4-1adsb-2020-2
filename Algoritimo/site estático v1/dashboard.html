@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/esculápio.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+    <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Health Analytics | Dashboards</title>
+</head>
+
+<body>
+    <!--HEADER-->
+
+    <div class="header">
+        <div class="header2">
+            <a href="/index.html"><img src="/img/logo_header.png" alt=""></a>
+
+            <!--nav-->
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Como Funciona</a></li>
+                    <li><a href="/dashboard.html">Dashboard</a></li>
+                    <li><a href="simulador.html">Simulador</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a id="login" href="/login.html"> <img src="/img/login_white.png" alt=""></a></li>
+
+                </ul>
+            </div>
+        </div>
+        <!--end nav-->
+
+
+        <!--api start-->
+        <div class="api">
+        <section>
+            <h2>Média: <label id='average'>0.00</label></h2>
+            <h2>Média Hora: <label id='averageHour'>0.00</label></h2>
+        </section>
+        <section style="width:100%">
+            <canvas id="chart"></canvas>
+            <section>
+                <script>
+                    var context = document.getElementById("chart").getContext("2d");
+                    context.canvas.width = 1000; //altera largura do gráfico
+                    context.canvas.height = 300; //altera altura do gráfico
+
+                    var configuration = {
+                        type: 'line', //alteração do tipo de gráfico (barra, linhas, pizza...)
+                        data: {
+                            datasets: [{
+                                label: "Temperature x Time",
+                                type: 'line',
+                                backgroundColor: [
+                                    '#232323'
+                                ], //altera a cor de fundo do gráfico
+                                borderColor: ['blue;'], // altera a cor da linha do gráfico
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                xAxes: [{
+                                    //type: 'value',
+                                    distribution: 'series',
+                                    ticks: {
+                                        beginAtZero: true,
+                                        maxticksLimit: 5
+                                    }
+                                }],
+                                yAxes: [{
+                                    scaleLabel: {
+                                        display: true,
+                                        labelString: 'Temperature'
+                                    },
+                                    ticks: {
+                                        beginAtZero: true,
+                                        suggestedMin: 0,
+                                        suggestedMax: 30
+                                    }
+                                }]
+                            },
+                            animation: {
+                                duration: 0
+                            }
+                        }
+                    };
+
+                    var chart = new Chart(context, configuration);
+
+                    //Função para obter os dados de temperatura do server
+                    //Seria mais interessante fazer isso com WebSocket, porém para fins academicos, os dados serão atualizados via HTTP
+
+                    //Esse atributo dentro do contexto serve para saber qual foi o último índice processado, assim eliminado os outros elementos na
+                    //hora de montar/atualizar o gráfico
+                    this.lastIndexTemp = 0;
+                    this.time = 0;
+
+                    function get_data() {
+
+                        var http = new XMLHttpRequest();
+                        http.open('GET', 'http://localhost:3000/api', false);
+                        http.send(null);
+
+                        var obj = JSON.parse(http.responseText);
+                        console.log(obj)
+                        if (obj.data.length == 0) {
+                            return;
+                        }
+
+                        var _lastIndexTemp = this.lastIndexTemp;
+                        this.lastIndexTemp = obj.data.length;
+                        listTemp = obj.data.slice(_lastIndexTemp);
+
+                        listTemp.forEach(data => {
+                            //Máximo de 60 itens exibidos no gráfico
+                            if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10) {
+                                chart.data.labels.shift();
+                                chart.data.datasets[0].data.shift();
+                            }
+
+                            chart.data.labels.push(this.time++);
+                            chart.data.datasets[0].data.push(parseFloat(data));
+                            chart.update();
+                        });
+
+                        document.getElementById('average').textContent = obj.average;
+                        document.getElementById('averageHour').textContent = obj.averageHour;
+                    }
+
+                    get_data();
+
+
+                    function sendTemperature() {
+                        var http = new XMLHttpRequest();
+                        http.open('POST', 'http://localhost:3000/api/sendData', false);
+                        http.send(null);
+                    }
+
+                    setInterval(() => {
+                        sendTemperature();
+                        get_data();
+                    }, 1000);
+                </script>
+
+    </div>
+</div>
+
+<div class="dados">
+    <h3><span style="color: blue;">Média Temperatura:</span> 37º </h3>
+    <h3><span style="color: blue;">Última medição:</span>  38º |  20/04/2020</h3>
+    <h3><span style="color: blue;">Maior Temperatura ult 30 dias:</span> 39º | 03/01/2020</h3>
+    <br><br>
+    <div class="table">
+        <h2>Histórico de Temperatura:</h2>
+<br>
+<table>
+  <tr>
+    <th>Temperatura</th>
+    <th>Data</th>
+    
+  </tr>
+  <tr>
+    <td>39º</td>
+    <td>20/09/2020</td>
+    
+  </tr>
+  <tr>
+    <td>37º</td>
+    <td>19/03/2020</td>
+    
+  </tr>
+  <tr>
+    <td>38º</td>
+    <td>18/05/2020</td>
+    
+  </tr>
+  <tr>
+    <td>39º</td>
+    <td>20/03/2020</td>
+    
+  </tr>
+  <tr>
+    <td style="color: red;">40º</td>
+    <td>24/06/2020</td>
+    <td style="padding-left: 20px;color: red;font-size: 20px;">alerta!</td>
+    
+  </tr>
+  <tr>
+    <td style="color: red;">40º</td>
+    <td>06/07/2020</td>
+    <td style="padding-left: 20px;color: red;font-size: 20px;">alerta!</td>
+    
+  </tr>
+</table>
+    </div>
+</div>
+    <!--api finish-->
+
+    <!--footer-->
+    <div class="footer">
+        <div class="contaner_footer">
+            <ul>
+                <li><a><img src="/img/icons/facebook.png" alt=""></a></li>
+                <li><a target="_blank" href="https://github.com/Projeto-PI-Grupo-4/Health-Analytics"><img src="/img/icons/github.png" alt="" "></a></li>
+                <li><a><img src="/img/icons/twitter.png" alt=""></a></li>
+                <li><a><img src="/img/icons/linkedin.png" alt=""></a></li>
+
+
+
+            </ul>
+        </div>
+    </div>
+    <!--footer finish-->
+
+
+
+</body>
+
+</html>

@@ -1,2 +1,18 @@
-# grupo4-1adsb-2020-2
-Repositório criado para a disciplina de Pesquisa e Inovação - Grupo 4 - 1º ADS - Turma B - 2020/2.
+<h1> Health Analytics (Sprint 2) </h1>
+
+<a href="https://imgur.com/OSNHwn7.png">
+  <img src="https://imgur.com/OSNHwn7.png" />
+</a>
+
+<h2> -- Documentação -- </h2>
+
+Contexto de Negocio/Justificava de Projeto:
+https://docs.google.com/document/d/1cNIFu2jOb0FqwyjzQVpA48AiBDxQ39tviBvBGlcJtbg/edit#
+
+Backlog do Projeto (TI):
+https://trello.com/c/b9aPZETe/29-sprint-backlog
+
+Power Point do projeto:
+
+--
+.
