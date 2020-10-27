@@ -8,6 +8,7 @@ html {
 * {
     margin: 0;
     padding: 0;
+    background-color: rgba(127, 255, 212, 0);
 }
 
 body {
