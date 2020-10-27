@@ -111,6 +111,7 @@ padding-top: 30px;;
 .footer {
     background-color: turquoise;
     height: 300px;
+    margin-top: 80px;
 }
 
 .fale_conosco {
@@ -122,9 +123,7 @@ padding-top: 30px;;
     padding: 20px 20px 0px 20px;
 }
 
-.contaner_footer{
-    padding-top:50px ;
-}
+
 /*fim do footer*/
 
 
@@ -137,4 +136,8 @@ canvas {
 .dados{
     margin-left:50px;
     padding-bottom:30px; 
+}
+
+.grafico{
+    display: none;
 }
