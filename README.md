@@ -13,6 +13,7 @@ Backlog do Projeto (TI):
 https://trello.com/c/b9aPZETe/29-sprint-backlog
 
 Power Point do projeto:
+https://www.canva.com/design/DAEKzRKq_VY/-s07g6mPkQ8CdbsG02wk_g/edit
 
 --
 .
