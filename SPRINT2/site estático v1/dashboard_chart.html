@@ -30,22 +30,25 @@
                 </ul>
             </div>
 		</div>
-
-		
+	</div>
         <!--end nav-->
 
-	<!-- Grafico 1 -->
+	<!-- Graficos -->
 	<button id="btnFuncionario" class="btn btnStyle" onclick="mostrarIndividual()">Individual</button>
 	<button id="btnAdmin" class="btn btnStyle" onclick="mostrarAdmin()">Admin</button>
 	<a href="dashboard.html" target="_blank"><button class="btn btnStyle" id="btnAPI" onclick="mostrarAPI()">API</button></a>
     <div id="graficoPrincipal" class="grafico_principal">
+		<h3>Funcionario 1</h3>
 		<canvas id="c_grafico"></canvas>
 	</div>
 	<div id="adminGrafico" class="admin grafico_principal">
+		<h3>Funcionario 1</h3>
 		<canvas id="c_grafico1"></canvas>
+		<h3>Funcionario 2</h3>
 		<canvas id="c_grafico2"></canvas>
+		<h3>Funcionario 3</h3>
 		<canvas id="c_grafico3"></canvas>
-		<h3>FUNCIONARIO 4</h3>
+		<h3>Funcionario 4</h3>
 		<canvas id="c_grafico4"></canvas>
 	</div>
 	
@@ -92,7 +95,7 @@
 			responsive: true,
 			title: {
 				display: true,
-				text: 'Gráfico de histórico de temperatura do (funcinario 1)'
+				text: ''
 			},
 			tooltips: {
 				mode: 'index',
@@ -137,7 +140,7 @@
 			responsive: true,
 			title: {
 				display: true,
-				text: 'Gráfico de histórico de temperatura do (funcinario 1)'
+				text: ''
 			},
 			tooltips: {
 				mode: 'index',
@@ -172,9 +175,9 @@
 			labels: ["02/09", "03/09", "04/09", "05/09", "06/09"],
 			datasets: [{
 				label: 'Temperatura x Dia',
-				backgroundColor: window.chartColors.blue,
-				borderColor: window.chartColors.blue,
-				data: ["36.7", "36.5", "37.3", "37.7", "38.9"],
+				backgroundColor: window.chartColors.green,
+				borderColor: window.chartColors.green,
+				data: ["36.3", "37.5", "36.6", "38.2", "37.1"],
 				fill: false,
 			}]
 		},
@@ -182,7 +185,7 @@
 			responsive: true,
 			title: {
 				display: true,
-				text: 'Gráfico de histórico de temperatura do (funcinario 1)'
+				text: ''
 			},
 			tooltips: {
 				mode: 'index',
@@ -217,9 +220,9 @@
 			labels: ["02/09", "03/09", "04/09", "05/09", "06/09"],
 			datasets: [{
 				label: 'Temperatura x Dia',
-				backgroundColor: window.chartColors.blue,
-				borderColor: window.chartColors.blue,
-				data: ["36.7", "36.5", "37.3", "37.7", "38.9"],
+				backgroundColor: window.chartColors.yellow,
+				borderColor: window.chartColors.yellow,
+				data: ["37.2", "36.9", "38.3", "38.7", "37.0"],
 				fill: false,
 			}]
 		},
@@ -227,7 +230,7 @@
 			responsive: true,
 			title: {
 				display: true,
-				text: 'Gráfico de histórico de temperatura do (funcinario 1)'
+				text: ''
 			},
 			tooltips: {
 				mode: 'index',
@@ -262,9 +265,9 @@
 			labels: ["02/09", "03/09", "04/09", "05/09", "06/09"],
 			datasets: [{
 				label: 'Temperatura x Dia',
-				backgroundColor: window.chartColors.blue,
-				borderColor: window.chartColors.blue,
-				data: ["36.7", "36.5", "37.3", "37.7", "38.9"],
+				backgroundColor: window.chartColors.red,
+				borderColor: window.chartColors.red,
+				data: ["38.5", "37.5", "36.5", "36.3", "36.0"],
 				fill: false,
 			}]
 		},
@@ -272,7 +275,7 @@
 			responsive: true,
 			title: {
 				display: true,
-				text: 'Gráfico de histórico de temperatura do (funcinario 1)'
+				text: ''
 			},
 			tooltips: {
 				mode: 'index',
