@@ -8,26 +8,20 @@
     <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
     <link rel="shortcut icon" href="img/esculápio.png">
     <link rel="stylesheet" href="dashboard_chart.css">
-	<style>
-	canvas{
-		-moz-user-select: none;
-		-webkit-user-select: none;
-		-ms-user-select: none;
-	}
-	</style>
+	
 </head>
 
 <body>
     <!--HEADER-->
 
-    <div class="header">
+    < class="header">
         <div class="header2">
             <a href="index.html"><img src="img/logo_header.png" alt=""></a>
 
             <!--nav-->
             <div class="nav">
                 <ul>
-                    <li><a href="index.html#como_funciona">Como Funciona</a></li>
+                    
                     <li><a href="dashboard.html">Dashboard</a></li>
                     <li><a href="simulador.html">Simulador</a></li>
                     <li><a href="#contato">Contato</a></li>
@@ -35,14 +29,24 @@
 
                 </ul>
             </div>
-        </div>
+		</div>
+		
         <!--end nav-->
 
-    <!-- Grafico 1 -->
-
-    <div style="width:50%;">
+	<!-- Grafico 1 -->
+	<button id="btnFuncionario" class="btn btnStyle" onclick="mostrarIndividual()">Individual</button>
+	<button id="btnAdmin" class="btn btnStyle" onclick="mostrarAdmin()">Admin</button>
+	<a href="dashboard.html" target="_blank"><button class="btn btnStyle" id="btnAPI" onclick="mostrarAPI()">API</button></a>
+    <div id="graficoPrincipal" class="grafico_principal">
 		<canvas id="c_grafico"></canvas>
 	</div>
+	<div id="adminGrafico" class="admin grafico_principal">
+		<canvas id="c_grafico1"></canvas>
+		<canvas id="c_grafico2"></canvas>
+		<canvas id="c_grafico3"></canvas>
+		<canvas id="c_grafico4"></canvas>
+	</div>
+	
 
     <!--footer-->
     <div class="footer" id="contato">
@@ -70,7 +74,7 @@
 </body>
 </html>
 <script>
-    var config = {
+	var config = {
 		type: 'line',
 		data: {
 			labels: ["02/09", "03/09", "04/09", "05/09", "06/09"],
@@ -115,13 +119,222 @@
 		}
 	};
 
+	var config1 = {
+		type: 'line',
+		data: {
+			labels: ["02/09", "03/09", "04/09", "05/09", "06/09"],
+			datasets: [{
+				label: 'Temperatura x Dia',
+				backgroundColor: window.chartColors.blue,
+				borderColor: window.chartColors.blue,
+				data: ["36.7", "36.5", "37.3", "37.7", "38.9"],
+				fill: false,
+			}]
+		},
+		options: {
+			responsive: true,
+			title: {
+				display: true,
+				text: 'Gráfico de histórico de temperatura do (funcinario 1)'
+			},
+			tooltips: {
+				mode: 'index',
+				intersect: false,
+			},
+			hover: {
+				mode: 'nearest',
+				intersect: true
+			},
+			scales: {
+				xAxes: [{
+					display: true,
+					scaleLabel: {
+						display: true,
+						labelString: 'Dia da Leitura'
+					}
+				}],
+				yAxes: [{
+					display: true,
+					scaleLabel: {
+						display: true,
+						labelString: 'ºC'
+					}
+				}]
+			}
+		}
+	};
+
+	var config2 = {
+		type: 'line',
+		data: {
+			labels: ["02/09", "03/09", "04/09", "05/09", "06/09"],
+			datasets: [{
+				label: 'Temperatura x Dia',
+				backgroundColor: window.chartColors.blue,
+				borderColor: window.chartColors.blue,
+				data: ["36.7", "36.5", "37.3", "37.7", "38.9"],
+				fill: false,
+			}]
+		},
+		options: {
+			responsive: true,
+			title: {
+				display: true,
+				text: 'Gráfico de histórico de temperatura do (funcinario 1)'
+			},
+			tooltips: {
+				mode: 'index',
+				intersect: false,
+			},
+			hover: {
+				mode: 'nearest',
+				intersect: true
+			},
+			scales: {
+				xAxes: [{
+					display: true,
+					scaleLabel: {
+						display: true,
+						labelString: 'Dia da Leitura'
+					}
+				}],
+				yAxes: [{
+					display: true,
+					scaleLabel: {
+						display: true,
+						labelString: 'ºC'
+					}
+				}]
+			}
+		}
+	};
+
+	var config3 = {
+		type: 'line',
+		data: {
+			labels: ["02/09", "03/09", "04/09", "05/09", "06/09"],
+			datasets: [{
+				label: 'Temperatura x Dia',
+				backgroundColor: window.chartColors.blue,
+				borderColor: window.chartColors.blue,
+				data: ["36.7", "36.5", "37.3", "37.7", "38.9"],
+				fill: false,
+			}]
+		},
+		options: {
+			responsive: true,
+			title: {
+				display: true,
+				text: 'Gráfico de histórico de temperatura do (funcinario 1)'
+			},
+			tooltips: {
+				mode: 'index',
+				intersect: false,
+			},
+			hover: {
+				mode: 'nearest',
+				intersect: true
+			},
+			scales: {
+				xAxes: [{
+					display: true,
+					scaleLabel: {
+						display: true,
+						labelString: 'Dia da Leitura'
+					}
+				}],
+				yAxes: [{
+					display: true,
+					scaleLabel: {
+						display: true,
+						labelString: 'ºC'
+					}
+				}]
+			}
+		}
+	};
+
+	var config4 = {
+		type: 'line',
+		data: {
+			labels: ["02/09", "03/09", "04/09", "05/09", "06/09"],
+			datasets: [{
+				label: 'Temperatura x Dia',
+				backgroundColor: window.chartColors.blue,
+				borderColor: window.chartColors.blue,
+				data: ["36.7", "36.5", "37.3", "37.7", "38.9"],
+				fill: false,
+			}]
+		},
+		options: {
+			responsive: true,
+			title: {
+				display: true,
+				text: 'Gráfico de histórico de temperatura do (funcinario 1)'
+			},
+			tooltips: {
+				mode: 'index',
+				intersect: false,
+			},
+			hover: {
+				mode: 'nearest',
+				intersect: true
+			},
+			scales: {
+				xAxes: [{
+					display: true,
+					scaleLabel: {
+						display: true,
+						labelString: 'Dia da Leitura'
+					}
+				}],
+				yAxes: [{
+					display: true,
+					scaleLabel: {
+						display: true,
+						labelString: 'ºC'
+					}
+				}]
+			}
+		}
+	};
+
+
 	function plotarGrafico() {
 
 		// criação do gráfico na página
 		var ctx = document.getElementById('c_grafico').getContext('2d');
 		window.graficoLinha = new Chart(ctx, config);
+		var ctx = document.getElementById('c_grafico1').getContext('2d');
+		window.graficoLinha = new Chart(ctx, config1);
+		var ctx = document.getElementById('c_grafico2').getContext('2d');
+		window.graficoLinha = new Chart(ctx, config2);
+		var ctx = document.getElementById('c_grafico3').getContext('2d');
+		window.graficoLinha = new Chart(ctx, config3);
+		var ctx = document.getElementById('c_grafico4').getContext('2d');
+		window.graficoLinha = new Chart(ctx, config4);
+		
 	}
 
 	// indicando que a função "plotarGrafico" será invocada assim que a página carregar
 	window.onload = plotarGrafico;
+
+	function mostrarAdmin(){
+		adminGrafico.style.display = "block";
+		graficoPrincipal.style.display = "none";
+		btnAdmin.style.display = "none";
+		btnFuncionario.style.display ="block";
+		btnAPI.style.display = "block";
+	}
+	function mostrarIndividual(){
+		graficoPrincipal.style.display = "block";
+		btnFuncionario.style.display = "none";
+		btnAdmin.style.display = "block";
+		adminGrafico.style.display = "none";
+		btnAPI.style.display = "none";
+	}
+
+	function mostrarAPI(){
+
+	}
 </script>

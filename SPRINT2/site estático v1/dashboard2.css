@@ -10,31 +10,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.btnStyle{
-    background-color: Transparent;
-    background-repeat: no-repeat;
-    border: 1px solid turquoise;
-    cursor: pointer;
-    color: black;
-    padding: 20px;
-    border-radius: 60px;
-    font-size: 20px;
-}
-
-.btn{
-    float:right;
-}
-#btnAPI{
-    display: none;
-    float: right;
-}
-
-#btnFuncionario{
-    float: right;
-    display: none;
-}
-/*Fim Global*/
-
 /*Header*/
 .header {
     background-color: #fff;
@@ -57,7 +32,25 @@ body {
     
  }
 
- /*nav*/
+ /*button*/
+ .btn {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: 1px solid #fff;
+    cursor:pointer;
+    color:#fff;
+    padding: 20px;
+    border-radius: 60px;
+    font-size: 20px;
+
+}
+
+.btn-div {
+padding-top: 30px;;
+}
+
+
+/*nav*/
 
 .nav {
     float:right;
@@ -84,7 +77,21 @@ body {
      padding-left:50px;
  }
 
- /*footer*/
+/*showcase*/
+
+
+.showcase {
+    padding-left: 60px;
+}
+
+
+.showcase p {
+    color:#fff;
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*footer*/
 .footer img {
     width: 40px;
 }
@@ -120,18 +127,17 @@ body {
 /*fim do footer*/
 
 
-/*Inicio Grafico*/
-canvas{
+canvas {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
 }
 
-.grafico_principal{
-    width:50%;
+.dados{
+    margin-left:50px;
+    padding-bottom:30px; 
 }
 
-.admin{
-    display: none;
+.grafico{
+   display:none;
 }
-/*Fim Grafico*/
