@@ -45,7 +45,7 @@
                     <canvas id="chart"></canvas>
             <section>
         </div>
-        <div class="grafico">
+        <div class="grafico"> <!--CLASSE "grafico" esta com "display:none"-->
             <section>
                 <h1>Claudio Silva (Funcionario 2)</h1>
                 <h2>Média: <label id='averageHumidity'>0.00</label></h2>
@@ -55,7 +55,7 @@
                 <canvas id="chart-humidity"></canvas>
             <section>
         </div>
-        <div class="grafico">
+        <div class="grafico"> <!--CLASSE "grafico" esta com "display:none"-->
             <section >
                 <h1>Marcos Santos (Funcionario 3)</h1>
                 <h2>Média: <label id='averageHumidity'>0.00</label></h2>
@@ -65,7 +65,7 @@
                 <canvas id="chart-switch"></canvas>
             <section>
         </div>
-        <div class="grafico">
+        <div class="grafico"> <!--CLASSE "grafico" esta com "display:none"-->
             <section>
                 <h1>Samuel Lopes (Funcionario 4)</h1>
                 <h2>Média: <label id='averageLumi'>0.00</label></h2>
@@ -78,8 +78,9 @@
         <script>
     
             var context = document.getElementById("chart").getContext("2d");
-            context.canvas.width = 1000;
-            context.canvas.height = 300;
+            context.canvas.width = 1000; //definindo largura do dashboard
+            context.canvas.height = 300; //definindo altura do dashboard
+            
             
             var configuration = {
                 type: 'line',
@@ -87,8 +88,8 @@
                     datasets: [{
                         label: "Temperatura x Dia",
                         type: 'line',
-                        borderColor: ['#043D9E'],
-                        backgroundColor: ['rgba(127, 255, 212, 0)']
+                        borderColor: ['#043D9E'],//definindo a cor da borda
+                        backgroundColor: ['rgba(127, 255, 212, 0)'] //definindo a cor do background(transparente)
                         
                     }]
                 },
@@ -107,9 +108,9 @@
                                 labelString: 'Temperatura'
                             },
                             ticks: {
-                                beginAtZero: false,
-                                suggestedMin: 30,
-							    suggestedMax: 46
+                                beginAtZero: false, //false para começar em zero
+                                suggestedMin: 30, //parâmetros min para o eixo Y
+							    suggestedMax: 46 //parâmetros max para o eixo X
                             }
                         }]
                     },
@@ -191,9 +192,9 @@
                                 labelString: 'Humidity'
                             },
                             ticks: {
-                                beginAtZero: false,
-                                suggestedMin: 30,
-							    suggestedMax: 45
+                                beginAtZero: false, //false para começar em zero
+                                suggestedMin: 30, //parâmetros min para o eixo Y
+							    suggestedMax: 46 //parâmetros max para o eixo X
                             }
                         }]
                     },
@@ -277,9 +278,9 @@
                                 labelString: 'Switch'
                             },
                             ticks: {
-                                beginAtZero: false,
-                                suggestedMin: 30,
-							    suggestedMax: 45
+                                beginAtZero: false, //false para começar em zero
+                                suggestedMin: 30, //parâmetros min para o eixo Y
+							    suggestedMax: 46 //parâmetros max para o eixo X
                             }
                         }]
                     },
@@ -361,9 +362,9 @@
                                 labelString: 'Luminosity'
                             },
                             ticks: {
-                                beginAtZero: false,
-                                suggestedMin: 30,
-							    suggestedMax: 45
+                                beginAtZero: false, //false para começar em zero
+                                suggestedMin: 30, //parâmetros min para o eixo Y
+							    suggestedMax: 46 //parâmetros max para o eixo X
                             }
                         }]
                     },

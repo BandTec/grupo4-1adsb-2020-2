@@ -1,3 +1,5 @@
+//TESTE UNITÁRIO
+
 //Importando o módulo Sensors e atribuindo a uma constante para acesso as funções do mesmo.
 const sensors = require('./sensors.js')
 
