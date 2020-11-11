@@ -23,6 +23,7 @@
         <div id="totens"></div>
         <div id="ganho"></div>
         <div id="gasto"></div>
+        <div id="mensal"></div>
     </section>
     <footer>
 
@@ -34,113 +35,142 @@
     var qtd_fun = Number(numF.value);
     var qtd_entradas = Number(qtd_entrada.value);
     var preco_totem = 1300;
+    var mensalidade = 120;
 
         if (qtd_fun < 40 && qtd_entradas == 1){
             totens.innerHTML = `É recomendado que você tenha <b>1</b> totem!`;
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem).toFixed(2)}</u>`;
+            mensal.innerHTML = `${(preco_totem*1).toFixed(2)}`;
 
         } else if (qtd_fun >= 40  && qtd_fun < 60 && qtd_entradas == 1){
             totens.innerHTML = `É recomendado que você tenha <b>2</b> totens!`;
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *2).toFixed(2)}</u>`;
+            mensal.innerHTML = `${(preco_totem * 2 / 10).toFixed(2)}`;
 
         } else if (qtd_fun >= 60  && qtd_fun < 100 && qtd_entradas == 1){
             totens.innerHTML= 'É recomendado que você tenha <b>2</b> totens!';
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *2).toFixed(2)}</u>`;
+            mensal.innerHTML = `${(preco_totem * 2 / 10).toFixed(2)}`;
+
 
         } else if (qtd_fun >= 100  && qtd_fun < 300 && qtd_entradas == 1){
             totens.innerHTML = 'É recomendado que voce tenha <b>3</b> totens!';
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem * 3).toFixed(2)}</u>`;
+            mensal.innerHTML = `${(preco_totem * 3 / 10).toFixed(2)}`;
+
 
         } else if (qtd_fun >= 300  && qtd_fun < 800 && qtd_entradas == 1){
             totens.innerHTML = 'É recomendado que voce tenha <b>2</b> totens!';
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem).toFixed(2)}</u>`;
+            mensal.innerHTML = `${(preco_totem * 2 / 10).toFixed(2)}`;
 
-        } else if(qtd_fun >= 40  && qtd_fun < 60 && qtd_entradas == 2){
+
+        } else if(qtd_fun < 40  && qtd_fun < 60 && qtd_entradas == 2){
             totens.innerHTML = 'É recomendado que voce tenha <b>2</b> totens!';
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *2).toFixed(2)}</u>`;
+            mensal.innerHTML = `${(preco_totem * 2 / 10).toFixed(2)}`;
+
 
         } else if(qtd_fun >= 60  && qtd_fun < 100 && qtd_entradas == 2){
             totens.innerHTML = 'É recomendado que voce tenha <b>2</b> totens!';
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *2).toFixed(2)}</u>`;
+            mensal.innerHTML = `${(preco_totem * 2 / 10).toFixed(2)}`;
+
 
         } else if(qtd_fun >= 100  && qtd_fun < 300 && qtd_entradas == 2){
             totens.innerHTML = 'É recomendado que voce tenha <b>3</b> totens!';
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *3).toFixed(2)}</u>`;
+            mensal.innerHTML = `${(preco_totem * 3 / 10).toFixed(2)}`;
+
 
         } else if(qtd_fun >= 300  && qtd_fun < 800 && qtd_entradas == 2){
             totens.innerHTML = 'É recomendado que voce tenha <b>6</b> totens!';
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *6).toFixed(2)}</u>`;
+            mensal.innerHTML = `${(preco_totem * 6 / 10).toFixed(2)}`;
 
-        } else if(qtd_fun >= 40  && qtd_fun < 60 && qtd_entradas == 3){
+
+        } else if(qtd_fun < 40  && qtd_fun < 60 && qtd_entradas == 3){
             totens.innerHTML = 'É recomendado que voce tenha <b>3</b> totens!';
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *3).toFixed(2)}</u>`;
+            mensal.innerHTML = `${(preco_totem * 3 / 10).toFixed(2)}`;
+        
 
         } else if(qtd_fun >= 60  && qtd_fun < 100 && qtd_entradas == 3){
             totens.innerHTML = 'É recomendado que voce tenha <b>3</b> totens!';
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *3).toFixed(2)}</u>`;
+            mensal.innerHTML = `${(preco_totem * 3 / 10).toFixed(2)}`;
 
         } else if(qtd_fun >= 100  && qtd_fun < 300 && qtd_entradas == 3){
             totens.innerHTML = 'É recomendado que voce tenha <b>5</b> totens!';
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *5).toFixed(2)}</u>`;
+            mensal.innerHTML = `${(preco_totem * 5 / 10).toFixed(2)}`;
 
         } else if(qtd_fun >= 300  && qtd_fun < 800 && qtd_entradas == 3){
             totens.innerHTML = 'É recomendado que voce tenha <b>6</b> totens!';
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *6).toFixed(2)}</u>`;
+            mensal.innerHTML = `${(preco_totem * 6 / 10).toFixed(2)}`;
 
-        } else if(qtd_fun >= 40  && qtd_fun < 60 && qtd_entradas == 4){
+        } else if(qtd_fun < 40  && qtd_fun < 60 && qtd_entradas == 4){
             totens.innerHTML = 'É recomendado que voce tenha <b>4</b> totens!';
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *4).toFixed(2)}</u>`;
+            mensal.innerHTML = `${(preco_totem * 4 / 10).toFixed(2)}`;
 
         } else if(qtd_fun >= 60  && qtd_fun < 100 && qtd_entradas == 4){
             totens.innerHTML = 'É recomendado que voce tenha <b>6</b> totens!';
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *6).toFixed(2)}</u>`;
+            mensal.innerHTML = `${(preco_totem * 6 / 10).toFixed(2)}`;
 
         } else if(qtd_fun >= 100  && qtd_fun < 300 && qtd_entradas == 4){
             totens.innerHTML = 'É recomendado que voce tenha <b>8</b> totens!';
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *8).toFixed(2)}</u>`;
+            mensal.innerHTML = `${(preco_totem * 8 / 10).toFixed(2)}`;
 
         } else if(qtd_fun >= 300  && qtd_fun < 800 && qtd_entradas == 4){
             totens.innerHTML = 'É recomendado que voce tenha <b>8</b> totens!';
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *8).toFixed(2)}</u>`;
+            mensal.innerHTML = `${(preco_totem * 8 / 10).toFixed(2)}`;
 
-        } else if(qtd_fun >= 40  && qtd_fun < 60 && qtd_entradas == 5){
+        } else if(qtd_fun < 40  && qtd_fun < 60 && qtd_entradas == 5){
             totens.innerHTML = 'É recomendado que voce tenha <b>5</b> totens!';
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *5).toFixed(2)}</u>`;
+            mensal.innerHTML = `${(preco_totem * 5 / 10).toFixed(2)}`;
 
         } else if(qtd_fun >= 60  && qtd_fun < 100 && qtd_entradas == 5){
             totens.innerHTML = 'É recomendado que voce tenha <b>7</b> totens!';
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *7).toFixed(2)}</u>`;
+            mensal.innerHTML = `${(preco_totem * 7 / 10).toFixed(2)}`;
 
         } else if(qtd_fun >= 100  && qtd_fun < 300 && qtd_entradas == 5){
             totens.innerHTML = 'É recomendado que voce tenha <b>8</b> totens!';
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *8).toFixed(2)}</u>`;
+            mensal.innerHTML = `${(preco_totem * 8 / 10).toFixed(2)}`;
 
         } else if(qtd_fun >= 300  && qtd_fun < 800 && qtd_entradas == 5){
             totens.innerHTML = 'É recomendado que voce tenha <b>10</b> totens!';
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *10).toFixed(2)}</u>`;
 
-        } else if(qtd_fun >= 40  && qtd_fun < 60 && qtd_entradas == 6){
+        } else if(qtd_fun < 40  && qtd_fun < 60 && qtd_entradas == 6){
             totens.innerHTML = 'É recomendado que voce tenha <b>6</b> totens!';
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *6).toFixed(2)}</u>`;
@@ -155,7 +185,7 @@
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *10).toFixed(2)}</u>`;
 
-        } else if(qtd_fun >= 300  && qtd_fun < 800 && qtd_entradas == 6){
+        } else if(qtd_fun >= 300  && qtd_fun <= 800 && qtd_entradas == 6){
             totens.innerHTML = 'É recomendado que voce tenha <b>12</b> totens!';
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
             gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *12).toFixed(2)}</u>`;
