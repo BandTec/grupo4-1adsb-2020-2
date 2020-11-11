@@ -10,15 +10,79 @@
     <header> <h1>Simulador Financeiro | Health Analytics</h1></header><br><br><br>
     <section>
         <div>
-            <h2>qtde Funcionarios: <input type="number" id="numF"></h2>
-            <h2>mediana dos salarios: <input type="number" id="salM"></h2>
-            <input type="button" value="Calcular" ondblclick="calcular()">
+            <h2>Quantidade de Funcionarios:</h2>
+            <input type="text" id="numF">
+    
+            <h2>Quantidade de entradas:</h2>
+            <input type="text" id="qtd_entrada">
+            
+            <!-- <h2>Mediana dos Salarios: </h2> <br>
+            <input type="text" id="salM"> -->
+
+            <button onclick="calcular()">Calcular</button>
         </div>
-        <div></div>
+        <div id="totens"></div>
     </section>
-    <footer></footer>
-    <script>
-        
-    </script>
+    <footer>
+
+    </footer>
 </body>
 </html>
+<script>
+    function calcular(){
+    var qtd_fun = Number(numF.value);
+    var qtd_entradas = Number(qtd_entrada.value);
+
+        if (qtd_fun < 40 && qtd_entradas == 1){
+            totens.innerHTML = `É recomendado que você tenha <b>1</b> totem!`;
+        } else if (qtd_fun >= 40  && qtd_fun < 60 && qtd_entradas == 1){
+            totens.innerHTML = `É recomendado que você tenha <b>2</b> totens!`;
+        } else if (qtd_fun >= 60  && qtd_fun < 100 && qtd_entradas == 1){
+            totens.innerHTML= 'É recomendado que você tenha <b>2</b> totens!';
+        } else if (qtd_fun >= 100  && qtd_fun < 300 && qtd_entradas == 1){
+            totens.innerHTML = 'É recomendado que voce tenha <b>3</b> totens!';
+        } else if (qtd_fun >= 300  && qtd_fun < 800 && qtd_entradas == 1){
+            totens.innerHTML = 'É recomendado que voce tenha <b>2</b> totens!';
+        } else if(qtd_fun >= 40  && qtd_fun < 60 && qtd_entradas == 2){
+            totens.innerHTML = 'É recomendado que voce tenha <b>2</b> totens!';
+        } else if(qtd_fun >= 60  && qtd_fun < 100 && qtd_entradas == 2){
+            totens.innerHTML = 'É recomendado que voce tenha <b>2</b> totens!';
+        } else if(qtd_fun >= 100  && qtd_fun < 300 && qtd_entradas == 2){
+            totens.innerHTML = 'É recomendado que voce tenha <b>3</b> totens!';
+        } else if(qtd_fun >= 300  && qtd_fun < 800 && qtd_entradas == 2){
+            totens.innerHTML = 'É recomendado que voce tenha <b>6</b> totens!';
+        } else if(qtd_fun >= 40  && qtd_fun < 60 && qtd_entradas == 3){
+            totens.innerHTML = 'É recomendado que voce tenha <b>3</b> totens!';
+        } else if(qtd_fun >= 60  && qtd_fun < 100 && qtd_entradas == 3){
+            totens.innerHTML = 'É recomendado que voce tenha <b>3</b> totens!';
+        } else if(qtd_fun >= 100  && qtd_fun < 300 && qtd_entradas == 3){
+            totens.innerHTML = 'É recomendado que voce tenha <b>5</b> totens!';
+        } else if(qtd_fun >= 300  && qtd_fun < 800 && qtd_entradas == 3){
+            totens.innerHTML = 'É recomendado que voce tenha <b>6</b> totens!';
+        } else if(qtd_fun >= 40  && qtd_fun < 60 && qtd_entradas == 4){
+            totens.innerHTML = 'É recomendado que voce tenha <b>4</b> totens!';
+        } else if(qtd_fun >= 60  && qtd_fun < 100 && qtd_entradas == 4){
+            totens.innerHTML = 'É recomendado que voce tenha <b>6</b> totens!';
+        } else if(qtd_fun >= 100  && qtd_fun < 300 && qtd_entradas == 4){
+            totens.innerHTML = 'É recomendado que voce tenha <b>8</b> totens!';
+        } else if(qtd_fun >= 300  && qtd_fun < 800 && qtd_entradas == 4){
+            totens.innerHTML = 'É recomendado que voce tenha <b>8</b> totens!';
+        } else if(qtd_fun >= 40  && qtd_fun < 60 && qtd_entradas == 5){
+            totens.innerHTML = 'É recomendado que voce tenha <b>5</b> totens!';
+        } else if(qtd_fun >= 60  && qtd_fun < 100 && qtd_entradas == 5){
+            totens.innerHTML = 'É recomendado que voce tenha <b>7</b> totens!';
+        } else if(qtd_fun >= 100  && qtd_fun < 300 && qtd_entradas == 5){
+            totens.innerHTML = 'É recomendado que voce tenha <b>8</b> totens!';
+        } else if(qtd_fun >= 300  && qtd_fun < 800 && qtd_entradas == 5){
+            totens.innerHTML = 'É recomendado que voce tenha <b>10</b> totens!';
+        } else if(qtd_fun >= 40  && qtd_fun < 60 && qtd_entradas == 6){
+            totens.innerHTML = 'É recomendado que voce tenha <b>6</b> totens!';
+        } else if(qtd_fun >= 60  && qtd_fun < 100 && qtd_entradas == 6){
+            totens.innerHTML = 'É recomendado que voce tenha <b>6</b> totens!';
+        } else if(qtd_fun >= 100  && qtd_fun < 300 && qtd_entradas == 6){
+            totens.innerHTML = 'É recomendado que voce tenha <b>10</b> totens!';
+        } else if(qtd_fun >= 300  && qtd_fun < 800 && qtd_entradas == 6){
+            totens.innerHTML = 'É recomendado que voce tenha <b>12</b> totens!';
+        }
+    }
+</script>

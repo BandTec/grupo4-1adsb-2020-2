@@ -29,6 +29,4 @@ function calcular() {
     document.getElementById('lucro').value = lucro.toLocaleString("pt-BR", { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' });
     document.getElementById('possiveis_perdas').innerHTML = possiveis_perdas.toLocaleString("pt-BR", { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' });
 
-
-
 }
