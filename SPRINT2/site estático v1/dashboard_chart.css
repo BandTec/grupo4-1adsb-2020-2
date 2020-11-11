@@ -9,6 +9,10 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color:rgba(221, 255, 253, 0.767);
+    
+    
+    
+    
 }
 
 .btnStyle{
@@ -24,15 +28,22 @@ body {
 
 .btn{
     float:right;
+    margin-top: 335px;
+    margin-right: 194px;
 }
 #btnAPI{
     display: none;
     float: right;
+    margin-top: 1574px;
+    margin-right: 90px;
 }
 
 #btnFuncionario{
     float: right;
     display: none;
+    margin-left: -350px;
+    margin-top: 1574px;
+
 }
 /*Fim Global*/
 
@@ -129,7 +140,13 @@ canvas{
 
 .grafico_principal{
     width:50%;
+    margin: 0 auto;
 }
+
+h1{
+    text-align: center;
+}
+
 
 .admin{
     display: none;
