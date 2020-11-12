@@ -8,6 +8,7 @@ html {
 * {
     margin: 0;
     padding: 0;
+    background-color: rgba(127, 255, 212, 0);
 }
 
 body {
@@ -18,7 +19,7 @@ body {
 /*Header*/
 .header {
     background-image: url(img/back.jpg);
-    min-height: 1000px;
+    min-height: 900px;
     background-size: cover;
 }
 
@@ -256,6 +257,10 @@ body {
     width: 40px;
 }
 
+.contaner_footer{
+    padding-top:50px ;
+}
+
 
 .footer li {
     display: inline-block;
@@ -268,12 +273,18 @@ body {
     margin-right: 40%;
 }
 
-
 .footer {
     background-color: turquoise;
-    height: 80px;
-
-
+    height: 300px;
 }
 
+.fale_conosco {
+    margin-left:1300px; 
+    padding:0 60px 30px 200px;
+}
+
+.fale_conosco .fale_block {
+   
+    padding: 20px 20px 0px 20px;
+}
 /*fim do footer*/

@@ -13,7 +13,7 @@ body {
 
 /*Header*/
 .header {
-    background-image: url(/img/back2.jpg);
+    background-image: url(img/back2.jpg);
     max-height: 1350px;
     background-size: cover;
 }
@@ -161,26 +161,37 @@ body {
 
 
 /*footer*/
-
 .footer img {
     width: 40px;
 }
 
+.contaner_footer{
+    padding-top:50px ;
+}
 
-.footer li{
+
+.footer li {
     display: inline-block;
-    padding: 0px 20px;
-    
+    padding: 20px 30px 0px 30px;
+
 }
 
 .footer ul {
-    float:right;
-    margin-right: 40%; 
+    float: right;
+    margin-right: 40%;
 }
-
 
 .footer {
     background-color: turquoise;
-    height: 80px;
-  
+    height: 350px;
 }
+
+.fale_conosco {
+    margin-left:1300px; 
+    padding:0 60px 30px 200px;
+}
+
+.fale_conosco .fale_block {
+    padding: 20px 20px 0px 20px;
+}
+/*fim do footer*/
