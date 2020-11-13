@@ -139,7 +139,6 @@ body {
     background-image: url(img/imagemprecos.png);
     min-height: 900px;
     background-size: cover;
-
 }
 
 
@@ -192,13 +191,19 @@ body {
 }
 /* inicio do planos */
 
-
+.third{
+    
+}
 
 .third h1{
 text-align: center;
 color: white;
-padding-top: 0px;
+padding-top: 30px;
 
+}
+
+.block{
+    display: inline-block;
 }
 
 .box-itemm{
@@ -210,16 +215,16 @@ padding-top: 60px;
 margin-left: 70px;
 margin-top: 30px;
 border-radius: 10px;
-
-
+padding: 10px 20px 20px 20px
 }
+
+
 .box-itemm h3{
 font-size: 40px;
-
+padding-top: 15px;
 }
 
 .box-itemm p{
-;
 font-size: 23px;
 }
 
@@ -237,11 +242,13 @@ color:black;
 background-color: white;
 opacity: 0.8;
 cursor: pointer;
+
 }
 
 .box-itemm button:hover{
 opacity: 1;
 }
+
 #paragrafo{
     padding-top: 40px;
 }
