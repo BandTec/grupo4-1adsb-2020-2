@@ -1,0 +1,14 @@
+.card{
+    display: flex;
+    margin: 10px;
+    width: 200px;
+    height: 150px;
+    font-size: 35px;
+    border: 5px rgb(114, 114, 114) solid;
+    border-radius: 40px;
+    color: black;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+   float: left;
+}
