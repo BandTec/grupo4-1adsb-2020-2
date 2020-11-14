@@ -191,9 +191,7 @@ body {
 }
 /* inicio do planos */
 
-.third{
-    
-}
+
 
 .third h1{
 text-align: center;
@@ -212,10 +210,10 @@ width: 400px;
 height: 600px;
 text-align: center;
 padding-top: 60px;
-margin-left: 70px;
+margin-left: 100px;
 margin-top: 30px;
 border-radius: 10px;
-padding: 10px 20px 20px 20px
+padding: 0px 27px 0px 27px;
 }
 
 
