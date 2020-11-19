@@ -95,6 +95,47 @@ body {
      padding-left:50px;
  }
 
+
+ .temperatura1{
+    background-color: rgb(255, 0, 0);
+    height: 200px;
+    width: 233px;
+    border-radius: 7px;
+    margin-left: 20px;
+    text-align: center;
+}
+.temperatura1 p {
+    font-size: 28px;
+    padding-top: 20px;
+font-weight: bold;
+}
+.temperatura1 h2 {
+font-size: 70px;
+padding-top: 15px;
+}
+
+
+.temperatura2{
+    background-color: #0000ff;
+    height: 200px;
+    width: 233px;
+    border-radius: 7px;
+    margin-left: 20px;
+    text-align: center;
+}
+.temperatura2 p {
+    font-size: 28px;
+    padding-top: 20px;
+font-weight: bold;
+}
+.temperatura2 h2 {
+font-size: 70px;
+padding-top: 15px;
+}
+
+
+
+
  /*footer*/
 .footer img {
     width: 40px;
