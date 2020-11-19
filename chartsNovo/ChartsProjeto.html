@@ -1,16 +1,36 @@
 <!doctype html>
 <link rel="stylesheet" href="css/style.css">
-<html>
+<html >
 
 <head>
     <meta charset="UTF-8">
     <title>Valor atual em tempo real</title>
 </head>
 
-<body id="b">
-   
-</body>
 
+<body>
+    <input type="checkbox" id="chec">
+    <label for="chec" >
+        <img src="../chartsNovo/IMG/icone_menu.png" alt="">
+    </label>
+    <nav>
+        <ul>
+            <li><a href=""><b>Setor A</b> </a></li>
+            <li><a href=""><b>Setor B</b></a></li>
+            <li><a href=""><b>Setor C</b></a></li>
+            <li><a href=""><b>Setor D</b></a></li>
+            <li><a href=""><b>Setor E</b></a></li>
+            <li><a href=""><b>Setor F</b></a></li>
+        </ul>
+    </nav>
+<div class="back">
+    <br><br><br><h1>Seja Bem vindo a central de controle do Health Analytics!</h1><br><br><br>
+
+<div class="margin">
+<div id="b" ></div>
+</div>
+</div>
+</body> 
 </html>
 
 <script>
@@ -42,7 +62,7 @@
                 contador++;
                 // chama a função novamente
                 receberNovasLeituras();	    
-            },1500); // 3000 ms -> 3 segundos
+            },500); // 3000 ms -> 3 segundos
 
         }
     }
