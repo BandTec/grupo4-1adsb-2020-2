@@ -96,6 +96,14 @@ body {
  }
 
 
+ #titulo_medicoes{
+     font-size: 70px;
+ }
+
+ .bloco_temperatura{
+     text-align: center;
+ }
+
  .temperatura1{
     background-color: rgb(255, 0, 0);
     height: 200px;
@@ -103,6 +111,8 @@ body {
     border-radius: 7px;
     margin-left: 20px;
     text-align: center;
+    display: inline-block;
+    margin-top: 50px;
 }
 .temperatura1 p {
     font-size: 28px;
@@ -122,6 +132,8 @@ padding-top: 15px;
     border-radius: 7px;
     margin-left: 20px;
     text-align: center;
+    display: inline-block;
+    margin-top: 50px;
 }
 .temperatura2 p {
     font-size: 28px;
