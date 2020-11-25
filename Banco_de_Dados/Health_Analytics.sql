@@ -1,40 +1,36 @@
-create database Health_Analytics;
-use Health_Analytics;
+CREATE DATABASE projeto;
 
--- Criação da tabela Empresa
-create table empresa (
-	idEmpresa int primary key auto_increment,
-    nomeEmpresa varchar(45),
-    plano varchar(45),
-    rua varchar(45),
-    cep char(9),
-    numero int,
-    cnpj char(14)
-)auto_increment = 1000;
+USE projeto;
 
--- Criação da tabela Usuario
-create table usuario (
-	idUsuario int primary key auto_increment,
-    nomeUsuario varchar(45),
-    rf_id varchar(50),
-    email varchar(45),
-    senha varchar(45),
-    adm tinyint,
-    fk_Empresa int, foreign key (fk_Empresa) references empresa(idEmpresa)
+CREATE TABLE empresa(
+    idEmpresa INT NOT NULL PRIMARY KEY,
+    nomeEmpresa VARCHAR(45) NOT NULL,
+    plano VARCHAR(45) NOT NULL,
+    rua VARCHAR(45) NOT NULL,
+    cep CHAR(9) NOT NULL,
+    numero INT NOT NULL,
+    cnpj CHAR(14) NOT NULL
 );
 
--- Criação da tabela Totem
-create table totem (
-	idTotem int primary key auto_increment,
-    fk_Empresa int, foreign key (fk_Empresa) references empresa(idEmpresa)
-)auto_increment = 10000;
 
--- Criação da tabela Medição
-create table medicao (
- 	fk_Usuario int primary key, foreign key (fk_Usuario) references usuario(idUsuario),
-    temperatura char(4),
-    dataMedição date,
-    fk_Totem int, foreign key (fk_Totem) references totem(idTotem)
+CREATE TABLE usuario(
+    idUsuario INT  PRIMARY KEY NOT NULL,
+    nomeUsuario NVARCHAR(45),
+    rf_id VARCHAR(45) NOT NULL,
+    email VARCHAR(45) NOT NULL,
+    senha VARCHAR(45) NOT NULL,
+    adm TINYINT,
+    fk_Empresa INT REFERENCES empresa(idEmpresa)
 );
-    
-    
+
+CREATE TABLE totem (
+    idTotem INT PRIMARY KEY NOT NULL,
+    fk_Empresa INT REFERENCES empresa(idEmpresa)
+);
+
+CREATE TABLE medicao(
+    fk_Usuario INT PRIMARY KEY REFERENCES usuario(idUsuario),
+    temperatura CHAR(4),
+    dataMedicao DATE NOT NULL,
+    fk_Totem INT REFERENCES totem(idTotem)
+);

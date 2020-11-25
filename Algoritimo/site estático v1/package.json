@@ -1,17 +1,9 @@
 {
-  "name": "readserialserver",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "name": "projeto-iot-revolucionario-raiz",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./server.js"
-  },
-  "author": "Marise Miranda ",
-  "license": "MIT",
-  "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
-    "serialport": "^6.0.4"
+    "start": "node ./projeto-site/bin/www",
+	"postinstall": "cd projeto-site && npm install"
   }
 }
