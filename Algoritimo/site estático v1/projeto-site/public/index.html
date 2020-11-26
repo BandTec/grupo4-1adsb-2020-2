@@ -1,89 +1,179 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto IoT</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/48b24e7021.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/esculápio.png">
+    <link rel="stylesheet" href="index.css">
+    <title>Health Analytics</title>
 </head>
 
 <body>
-    <!--header inicio-->
+    <!--HEADER-->
+
     <div class="header">
-        <div class="container">
-            <h1 class="titulo"><span class="highlight">Projeto</span> IoT Revolucionário</h1>
-            <div class="nav">
-                <ul>
-                    <li><a href="" class="current">Home</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="meu_cadastro.html">Cadastro</a></li>
-                    <li><a href="login.html">Login</a></li>
-                </ul>
+        <a href="index.html"><img src="img/logo_home_color.png" alt=""></a>
+
+
+        <div class="nav">
+            <ul>
+
+                <li><a href="dashboard_chart.html">Dashboard</a></li>
+                <li><a href="simulador.html">Simulador</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a id="login" href="login.html"> <img src="img/login_white.png" alt=""></a></li>
+
+            </ul>
+        </div>
+
+        <div class="showcase">
+
+
+            <p>Proteja seus funcionários</p>
+            <p>Descubra já nossas soluções.</p>
+            <div class="btn-div">
+                <a href="#funcionalidades"><button class="btn">Saiba Mais</button></a>
+
             </div>
         </div>
     </div>
-    <!--header fim-->
 
-    <!--banner inicio-->
-    <div class="banner">
-        <div class="container">
-            <div class="texto">
-                <h1 class="titulo">
-                    Este projeto tem um design bacana!
-                </h1>
-                <h3>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </h3>
+    <!--2º parte da página-->
+    <div class="second" id="como_funciona">
+        <div class="box-item">
+            <h1>HEALTH ANALYTICS: Controle,<br> Gestão e Segurança</h1>
+        </div>
+        <div class="box-item">
+            <p>Nos comprometemos a fornecer um controle eficiênte<br>
+                de temperatura para ambientes corporativos, podendo assim,<br>
+                fazer o controle correto de possíveis transmissões entre os<br>
+                funcionários.</p>
+        </div>
+
+    </div>
+
+    <!--Fim da 2º parte-->
+    <!--kaue-->
+    <div class="third">
+        <h1>PLANOS</h1>
+        <div class="block">
+            <div class="box-itemm">
+                <h3>Básico</h3>
+                <p>até 100 funcionários</p>
+                <h2>R$1000/mês</h2>
+                <button>COMPRAR</button>
+                <p id="paragrafo">Lorem</p>
+                <p>Lorem</p>
+                <p>Lorem</p>
+            </div>
+        </div>
+
+
+        <div class="block">
+            <div class="box-itemm">
+                <h3>Intermediário</h3>
+                <p>até 500 funcionários</p>
+                <h2>R$2000/mês</h2>
+                <button>COMPRAR</button>
+                <p id="paragrafo">Lorem</p>
+                <p>Lorem</p>
+                <p>Lorem</p>
+            </div>
+        </div>
+
+        <div class="block">
+            <div class="box-itemm">
+                <h3>Avançado</h3>
+                <p>até 1000 funcionários</p>
+                <h2>R$5000/mês</h2>
+                <button>COMPRAR</button>
+                <p id="paragrafo">Lorem</p>
+                <p>Lorem</p>
+                <p>Lorem</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--Inicio 4º parte-->
+    <div class="container" id="funcionalidades">
+        <div class="boxes">
+            <h2>Funcionalides:</h2>
+            <div class="box-container">
+                <img src="img/icons/distancing.png" alt="">
+                <p>Elimina Filas</p>
+            </div>
+            <div class="box-container">
+                <img src="img/icons/precision.png" alt="">
+                <p>Precisão na medição da temperatura</p>
+            </div>
+            <div class="box-container">
+                <img src="img/icons/security.png" alt="">
+                <p>Dados Seguros </p>
+            </div>
+            <div class="box-container">
+                <img src="img/icons/webpage.png" alt="">
+                <p>Plataforma Completa</p>
             </div>
         </div>
     </div>
-    <!--banner fim-->
+    <!--Fim 4º parte-->
 
-    <!--novidades e-mail inicio-->
-    <div class="novidades">
-        <div class="container">
-            <h2>Receba nossas atualizações</h2>
-            <form>
-                <input type="email" placeholder="Digite seu e-mail aqui ">
-                <button type="submit">Enviar</button>
-            </form>
+    <!-- INICIO - Missão visão e valores-->
+
+    <div class="history" id="historia">
+
+
+        <div class="blackout"></div>
+        <img src="img/esculápio.png" alt="">
+
+        <div class="p1-box">
+            <p id="paragraph1">A Health Analytics nasce em meio a uma pandemia, onde a atenção social se volta para os
+                cuidados com a higiene e saúde.</p>
+        </div>
+
+        <div class="p2-box">
+            <p id="paragraph2">
+                Voltamos nossos esforços para facilitara gestão das empresas com a saúde de seus funcionários,
+                garantindo
+                assim, um ambiente seguro para se trabalhar.
+            </p>
         </div>
     </div>
-    <!--novidades e-mail fim--> 
 
-    <!-- icones inicio -->
-    <div class="box">
-        <div class="container">
-            <div class="box-item">
-                <img src="img/missao.png">
-                <h3>Missão</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+
+
+    <!-- Fim - Missão visão e valores-->
+
+    <!--Footer-->
+    <div class="footer" id="contato">
+        <div class="contaner_footer">
+            <ul>
+                <li><a><img src="img/icons/facebook.png" alt=""></a></li>
+                <li><a target="_blank" href="https://github.com/Projeto-PI-Grupo-4/Health-Analytics"><img
+                            src="img/icons/github.png" alt=""></a></li>
+                <li><a><img src="img/icons/twitter.png" alt=""></a></li>
+                <li><a><img src="img/icons/linkedin.png" alt=""></a></li>
+            </ul>
+        </div>
+
+        <div class="fale_conosco">
+            <div class="fale_block">
+                <img src="img/telefone.png" alt="">
+                <p>Telefone: (11)94002-8922</p>
             </div>
-            <div class="box-item">
-                <img src="img/valores.png">
-                <h3>Valores</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="box-item">
-                <img src="img/visao.png">
-                <h3>Visão</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+            <div class="fale_block">
+                <img src="img/email.png" alt="">
+                <p>Email: healthanalytics@gmail.com.br</p>
             </div>
         </div>
     </div>
-    <!-- icones fim -->
-
-    <!--footer inicio-->
-    <div class="footer">
-        <div class="container">
-            <h4>Feito com <i class="far fa-heart"></i> por um aluno BandTec &COPY; 2020</h4>
-        </div>
-    </div>
-    <!--footer fim-->
-
-    
+    <!--Fim do footer-->
+  
 </body>
 
 </html>
