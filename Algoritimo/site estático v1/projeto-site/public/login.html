@@ -1,71 +1,160 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto IoT - Sobre</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/contato-e-login.css">
+    <link rel="shortcut icon" href="img/esculápio.png">
+    <link rel="stylesheet" href="login.css">
+    <title>Health Analytics | Login</title>
 </head>
 
 <body>
-    <!--header inicio-->
+    <!--HEADER-->
+
     <div class="header">
+        <a href="index.html"><img src="img/logo_home_color.png" alt=""></a>
+
+
+        <div class="nav">
+            <ul>
+               
+                <li><a href="dashboard_chart.html">Dashboard</a></li>
+                <li><a href="simulador.html">Simulador</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a id="login" href="login.html"> <img src="img/login_white.png" alt=""></a></li>
+
+            </ul>
+        </div>
+<!--Fim do Header-->
+
+<!--Login-->
+       
         <div class="container">
-            <h1 class="titulo"><span class="highlight">Projeto</span> IoT Revolucionário</h1>
-            <div class="nav">
+            <form id="form_login" method="post" onsubmit="return entrar()">
+                <h1>LOGIN</h1>
+                <div class="form-group">
+                    <label for="">Email:</label>
+                    <input name="login" type="email" class="form-input" required placeholder="Ex: name@host.com">
+                </div>
+                <div class="form-group">
+                    <label for=""> Senha:</label>
+                    <input name="senha" type="password" class="form-input" required placeholder="insert password">
+                </div>
+                <button id="btn_entrar" class="btn_login">Entrar</button>
+            </form>
+            <div id="div_erro" class="msg_erro">
+            </div>
+
+            <img src="img/loading.gif" id="img_aguarde"  style="display: none;" >
+        </div>
+        <!--Fim do login-->
+
+        <!-- Cadastro-->
+        <div class="container container2">
+            <form  id="form_cadastro" method="post" onsubmit="return cadastrar()">
+                <h3>AINDA NÃO É NOSSO CLIENTE?</h3>
+                <h1>CADASTRE-SE</h1>
+                <div class="form-group">
+                    <label for="">Cnpj:</label>
+                    <input type="number" name="cnpj" class="form-input" required placeholder="Insira o valor aqui">
+                </div>
+                <div class="form-group">
+                    <label for=""> Nome da empresa:</label>
+                    <input name="nomeEmpresa" type="text" class="form-input" required placeholder="Ex: E-corp">
+                </div>
+                <div class="form-group">
+                    <label for=""> telefone:</label>
+                    <input name="telefone" type="number" class="form-input" required placeholder="Insira o número aqui">
+                </div>
+                <div class="form-group">
+                    <label for=""> Email:</label>
+                    <input name="login" type="email" class="form-input" required placeholder="Ex: user@host.com">
+                </div>
+                <div class="form-group">
+                    <label for=""> Senha:</label>
+                    <input name="senha" type="password" class="form-input" required placeholder="insert password">
+                </div>
+                <input id="btn_entrar" type="submit" class="btn_login" value="Cadastrar">
+            </form>
+            <img src="img/loading.gif" id="img_aguarde" style="display: none; width:100px">
+    
+            <div id="div_erro" style="background-color: black; color: cyan; display: none;">
+                Erro no cadastro
+            </div>
+        
+        </div>
+
+        <!--Footer-->
+
+        <div class="footer" id="contato">
+            <div class="contaner_footer">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="meu_cadastro.html">Cadastro</a></li>
-                    <li><a href="" class="current">Login</a></li>
+                    <li><a><img src="img/icons/facebook.png" alt=""></a></li>
+                    <li><a target="_blank" href="https://github.com/Projeto-PI-Grupo-4/Health-Analytics"><img src="img/icons/github.png" alt="" "></a></li>
+                    <li><a><img src="img/icons/twitter.png" alt=""></a></li>
+                    <li><a><img src="img/icons/linkedin.png" alt=""></a></li>
                 </ul>
             </div>
-        </div>
-    </div>
-    <!--header fim-->
-
-    <div class="pag-login">
-        <div class="container">
-            <div class="box-login">
-                <h1>Login</h1>
-
-
-
-                <form id="form_login" method="post" onsubmit="return entrar()">
-                    Usuário:
-                    <input type="text" class="input-padrao" name="login">
-                    <br>
-                    Senha:
-                    <input type="password" class="input-padrao" name="senha">
-                    <br>
-                    <button id="btn_entrar" class="btn-green">Entrar</button>
-                </form>
-
-                <div class="extra">
-                    <div id="div_erro" class="msg_erro">
-                    </div>
-
-                    <img src="aguarde-orange.gif" id="img_aguarde"  > <!--style="display: none;"-->
-                    
+            <div class="fale_conosco">
+                <div class="fale_block">
+                <img src="img/telefone.png" alt="">
+                <p>Telefone: (11)94002-8922</p>
+                </div>
+                
+                <div class="fale_block">
+                <img src="img/email.png" alt="">
+                <p>Email: healthanalytics@gmail.com.br</p>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!--footer inicio-->
-    <div class="footer">
-        <div class="container">
-            <h4>Feito com carinho por um aluno BandTec. Copyright © 2020</h4>
-        </div>
-    </div>
-    <!--footer fim-->
+
+
 
 </body>
 
 </html>
+
 <script>
+
+    function cadastrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+            
+            if (response.ok) {
+
+                window.location.href='login.html';
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+                finalizar_aguardar();
+            }
+        });
+
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        img_aguarde.style.display='block';
+        div_erro.style.display='none';
+    }
+
+    function finalizar_aguardar() {
+        btn_entrar.disabled = false;
+        img_aguarde.style.display='none';
+        div_erro.style.display='block';
+    }
+
 
     function entrar() {
         aguardar();
@@ -82,7 +171,7 @@
                     sessionStorage.login_usuario_meuapp = json.login;
                     sessionStorage.nome_usuario_meuapp = json.nome;
 
-                    window.location.href = 'tempo-real.html';
+                    window.location.href = 'dashboard_chart.html';
                 });
 
             } else {
@@ -111,5 +200,6 @@
         div_erro.style.visibility = 'visible';
         div_erro.innerHTML = resposta;
     }
+
 
 </script>

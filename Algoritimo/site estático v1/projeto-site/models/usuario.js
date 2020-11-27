@@ -13,9 +13,19 @@ module.exports = (sequelize, DataTypes) => {
 			primaryKey: true,
 			autoIncrement: true
 		},		
-		nome: {
-			field: 'nome',
+		cnpj: {
+			field: 'cnpj',
+			type: DataTypes.CHAR,
+			allowNull: false
+		},
+		nomeEmpresa: {
+			field: 'nomeEmpresa',
 			type: DataTypes.STRING,
+			allowNull: false
+		},
+		telefone: {
+			field: 'telefone',
+			type: DataTypes.CHAR,
 			allowNull: false
 		},
 		login: {
