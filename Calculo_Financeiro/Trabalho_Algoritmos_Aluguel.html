@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de aluguel atrasado</title>
+</head>
+
+
+<body>
+    <center>
+    <div style="background-color: powderblue; height: 50px;width: 310px;"> <h1>Me pague o aluguel</h1></div>
+   
+    <img src="C:/Users/santa/desktop/BANDTEC/Algoritmos (Frizza)/ALGORITMOS/IMAGENS/Seu madruga.jpg" style="width: 300px;">
+    <br>
+    </div>
+
+    <b>Valor do aluguel:</b>
+    <input id="pri_num" type="text"> <br><br>
+    <b>Meses em atraso:</b>
+    <input id="seg_num" type="text">
+    <br><br>    
+    <button onclick="multiplicar()" style="background-color: powderblue;">Multiplicação</button>
+    <div id='div_mens'></div>
+    </center>
+</body>
+</html>
+<script>
+        function multiplicar() {
+        div_mens.innerHTML = "O valor total de aluguel em atraso é de : " + pri_num.value * seg_num.value;
+}</script>

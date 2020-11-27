@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Analytics</title>
+</head>
+
+
+<body>
+    <center>
+    <div style="background-color: #2EC4B6; height: 50px;width: 310px;"> <h1>Calcule os Valores</h1></div>
+   
+    <img src="C:/Users/santa/desktop/Calculo_Financeiro/img/esculápio.png" style= "width: 200px;">
+    <br>
+    </div>
+
+    <b>Quantidade de Dispositivos</b>
+    <input id="pri_num" type="text"> <br><br>
+    <br>   
+    <button onclick="multiplicar()" style="background-color: powderblue;">Calcule</button>
+    <div id='div_mens'></div>
+
+<br><br>
+     De acordo com a segurança e medicina do trabalho, é de suma importância que as empresas tenham respobilidade e preocupação com saude de cada colaborador.<br>
+     Pois um funcionário disposto e saudável é = um funcionário mais feliz e produtivo.
+    </center>
+</body>
+</html>
+<script>
+        function multiplicar() {
+            var primeiro_num = pri_num.value;
+            var seg_num = 4000;
+        div_mens.innerHTML = "<b>O valor do serviço é de<b>: " + primeiro_num * seg_num;
+}</script>

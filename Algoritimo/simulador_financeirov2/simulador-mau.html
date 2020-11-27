@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/esculápio.png">
+	<link rel="stylesheet" href="simulador-mau.css">
     <title>Health Analytics | </title>
 </head>
 <body>
-    
+    <div class="fundo">
     <header> <h1>Simulador Financeiro | Health Analytics</h1></header><br><br><br>
     <section>
         <div>
-            <h2>Quantidade de Funcionarios:</h2>
-            <input type="text" id="numF">
-    
+            Quantidade de Funcionarios: <br><br>
+            <b id="numF">0</b>
+            <button id="mais" onclick="soma()" ><b>+</b> </button>
+            <button id="menos" onclick="sub()" ><b>-</b></button>
+            <br><br><br>
             <h2>Quantidade de entradas:</h2>
-            <input type="text" id="qtd_entrada">
+            <input id="ent" type="range" id="qtd_entrada">
 
             <button onclick="calcular()">Calcular</button>
             <!-- <h2>Mediana dos Salarios: </h2> <br>
@@ -29,6 +33,7 @@
     <footer>
 
     </footer>
+</div>
 </body>
 </html>
 <script>
