@@ -10,10 +10,47 @@ body {
     font-family: 'Roboto', sans-serif;
     
 }
+
+/*Header*/
 .header {
-    background-color: rgb(22, 122, 122);
-    height: 130px;
+    background-image: url(img/back.jpg);
+    min-height: 900px;
+    background-size: cover;
 }
+
+.header img {
+    width: 350px;
+    background-size: cover;
+    padding: 20px 0 0 30px;
+}
+
+/*button*/
+.btn {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: 1px solid #fff;
+    cursor: pointer;
+    color: #fff;
+    padding: 20px;
+    border-radius: 60px;
+    font-size: 20px;
+
+}
+
+.btn-div {
+    padding-top: 30px;
+    
+}
+
+.btn-div button:hover{
+    background-color: white;
+    opacity: 0.9;
+    color: black;
+    
+}
+
+/*fim do button*/
+
 /*nav*/
 
 .nav {
@@ -44,22 +81,26 @@ body {
 /*fim do nav*/
 
 
+/*showcase*/
+.showcase {
+    padding-left: 60px;
+}
+
+
+.showcase p {
+    color: #fff;
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*fim showcase*/
+
+
 .fundo {
     background-color:  rgba(12, 128, 128, 0.233); 
-    height: 850px;
+    height: 800px;
 }
-.back_color {
-    margin: 0 0 0 180px;
-    float: left;
-    height: 600px;
-    width: 600px;
-    border-radius: 50px;
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
-    background: linear-gradient(45deg, rgb(200, 255, 255), #468c92, #5ec0bb,  #468c92,  rgb(200, 255, 255));
-     /* cor de fundo gradiente */
-}
+
 b {
     font-size: 20px;
 }
@@ -79,7 +120,7 @@ b {
 #mais:hover {
     background-color: rgb(22, 122, 122);
     color: white;
-    border-color: rgb(255, 255, 255);
+    border-color: rgb(22, 122, 122);
 }
 #menos {
     padding: 15px;
@@ -97,7 +138,7 @@ b {
 #menos:hover {
     background-color: rgb(22, 122, 122);
     color: white;
-    border-color:rgb(255, 255, 255);
+    border-color:rgb(22, 122, 122);
 }
 
 #numF {
@@ -107,33 +148,4 @@ b {
 #ent {
     height: 30px;
     width: 300px;
-    background-color:rgb(255, 255, 255) ;
-    transition: 0.3s;
-    font-size: 20px;
 }
-#ent:hover{
-    background-color:rgb(200, 255, 255) ;
-}
-
-#button_cal {
-    height: 40px;
-    width: 140px;
-    background-color:rgb(255, 255, 255) ;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: rgb(22, 122, 122);
-    color: rgb(22, 122, 122);
-}
-button span {
-    font-size: 20px;
-}
-
-#button_cal:hover {
-    background-color:rgb(22, 122, 122) ;
-    border-color:rgb(255, 255, 255);
-    color: white;
-}
-
-
