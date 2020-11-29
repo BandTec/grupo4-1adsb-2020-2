@@ -33,166 +33,159 @@
 	</div>
 	<!--end nav-->
 
-<h1 id="titulo_medicoes">MEDIÇOES DE TEMPERATURA (°C)</h1>
+<h1 id="titulo_medicoes">MEDIÇÕES DE TEMPERATURA CRÍTICAS (°C)</h1>
+<select class="comboSet" id="setores">
+	<option value="">Escolha o setor</option>
+	<option value="allSet" onchange="todos_setores()">Todos os setores</option>
+	<option value="set1" onchange="setor_1()">Setor 1</option>
+	<option value="set2" onchange="setor_2()">Setor 2</option>
+	<option value="set3" onchange="setor_3()">Setor 3</option>
+</select>
 
 <div class="bloco_temperatura">
 	<div class="temperatura1">
 		<p>João Ribeiro</p>
 		<h2>37.9º</h2>
+		<span><b>Setor 1</b></span>
 	</div>
 
-	<div class="temperatura2">
+	<div class="temperatura1">
 		<p>Roberto Silva</p>
 		<h2>39°</h2>
+		<span><b>Setor 2</b></span>
 	</div>
+
+
+	<div class="temperatura1">
+		<p>Julio Santos</p>
+		<h2>39°</h2>
+		<span><b>Setor 2</b></span>
+	</div>
+
 
 
 	<div class="temperatura2">
-		<p>Julio Santos</p>
-		<h2>39°</h2>
-	</div>
-
-
-
-	<div class="temperatura1">
 		<p>Joana Roberta</p>
-		<h2>34°
-
-		</h2>
+		<h2>34°</h2>
+		<span><b>Setor 2</b></span>
 	</div>
 
-	<div class="temperatura1">
+	<div class="temperatura2">
 		<p>Natan Oliveira</p>
-		<h2>34°
-
-		</h2>
+		<h2>34°</h2>
+		<span><b>Setor 2</b></span>
 	</div>
 
 
 	<div class="temperatura2">
 		<p>Fabio da Silva</p>
-		<h2>34°
-
-		</h2>
+		<h2>34°</h2>
+		<span><b>Setor 1</b></span>
 	</div>
 
 
 	<div class="temperatura2">
 		<p>Julia Abraão</p>
-		<h2>34°
-
-		</h2>
+		<h2>34°</h2>
+		<span><b>Setor 1</b></span>
 	</div>
 
 
 	<div class="temperatura1">
 		<p>Cida Moura</p>
-		<h2>34°
-
-		</h2>
+		<h2>39°</h2>
+		<span><b>Setor 3</b></span>
 	</div>
 
 
 
-	<div class="temperatura1">
+	<div class="temperatura2">
 		<p>Kevin Santos</p>
-		<h2>34°
-
-		</h2>
+		<h2>34°</h2>
+		<span><b>Setor 3</b></span>
 	</div>
 
 
 	<div class="temperatura1">
 		<p>Bianca Costa</p>
-		<h2>34°
-
-		</h2>
+		<h2>39°</h2>
+		<span><b>Setor 3</b></span>
 	</div>
 
 
 
-	<div class="temperatura1">
+	<div class="temperatura2">
 		<p>Vinicius Carvalho</p>
-		<h2>34°
-
-		</h2>
+		<h2>34°</h2>
+		<span><b>Setor 3</b></span>
 	</div>
 
 
 
 	<div onclick="Fernando()" class="temperatura2">
 		<p>Fernando Brandão</p>
-		<h2>34°
-
-		</h2>
+		<h2>34°</h2>
+		<span><b>Setor 3</b></span>
 	</div>
 
 
-	<div onclick=" Kaline()" class="temperatura2">
+	<div onclick=" Kaline()" class="temperatura1">
 		<p>Kaline Barreira</p>
-		<h2>34°
-
-		</h2>
+		<h2>39°</h2>
+		<span><b>Setor 3</b></span>
 	</div>
 
 
 	<div class="temperatura2">
 		<p>Eduardo Verri</p>
-		<h2>34°
-
-		</h2>
+		<h2>34°</h2>
+		<span><b>Setor 2</b></span>
 	</div>
 
 
 
 	<div class="temperatura2">
 		<p>Thiago Bonacelli</p>
-		<h2>34°
-
-		</h2>
+		<h2>34°</h2>
+		<span><b>Setor 2</b></span>
 	</div>
 
 
-	<div class="temperatura1">
+	<div class="temperatura2">
 		<p>Claudio Frizzarini</p>
-		<h2>34°
-
-		</h2>
+		<h2>34°</h2>
+		<span><b>Setor 2</b></span>
 	</div>
 
 
 	<div class="temperatura2">
 		<p>Celia Taniwaki</p>
-		<h2>34°
-
-		</h2>
+		<h2>34°</h2>
+		<span><b>Setor 1</b></span>
 	</div>
 
 
 
-	<div onclick="Vivian()" class="temperatura1">
+	<div onclick="Vivian()" class="temperatura2">
 		<p>Vivian Silva</p>
-		<h2>34°
-
-		</h2>
+		<h2>34°</h2>
+		<span><b>Setor 1</b></span>
 	</div>
 
 
 
 	<div class="temperatura1">
 		<p>Giuliana Miniguit</p>
-		<h2>34°
-
-		</h2>
+		<h2>39°</h2>
+		<span><b>Setor 1</b></span>
 	</div>
 
 
 
-	<div class="temperatura2">
+	<div class="temperatura1">
 		<p>Gustavo Jesus</p>
-		<h2>34°
-
-		</h2>
+		<h2>39°</h2>
+		<span><b>Setor 2</b></span>
 	</div>
 </div>
 
@@ -203,7 +196,7 @@
 			<ul>
 				<li><a><img src="img/icons/facebook.png" alt=""></a></li>
 				<li><a target="_blank" href="https://github.com/Projeto-PI-Grupo-4/Health-Analytics"><img
-							src="img/icons/github.png" alt="" "></a></li>
+							src="img/icons/github.png" alt=""></a></li>
                 <li><a><img src=" img/icons/twitter.png" alt=""></a></li>
 				<li><a><img src="img/icons/linkedin.png" alt=""></a></li>
 			</ul>
@@ -211,5 +204,23 @@
 
 		<!--footer finish-->
 </body>
-
 </html>
+
+<script>
+	function todos_setores(){
+		
+	}
+
+	function setor_1(){
+
+	}
+
+	function setor_2(){
+
+	}
+
+	function setor_3(){
+
+	}
+
+</script>
