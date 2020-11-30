@@ -18,17 +18,17 @@
 
         <div class="nav">
             <ul>
-               
+
                 <li><a href="dashboard_chart.html">Dashboard</a></li>
                 <li><a href="simulador.html">Simulador</a></li>
                 <li><a id="login" href="login.html"> <img src="img/login_white.png" alt=""></a></li>
 
             </ul>
         </div>
-<!--Fim do Header-->
+        <!--Fim do Header-->
 
-<!--Login-->
-       
+        <!--Login-->
+
         <div class="container">
             <form id="form_login" method="post" onsubmit="return entrar()">
                 <h1>LOGIN</h1>
@@ -45,13 +45,13 @@
             <div id="div_erro" class="msg_erro">
             </div>
 
-            <img src="img/loading.gif" id="img_aguarde"  style="display: none;" >
+            <img src="img/loading.gif" id="img_aguarde" style="display: none;">
         </div>
         <!--Fim do login-->
 
         <!-- Cadastro-->
         <div class="container container2">
-            <form  id="form_cadastro" method="post" onsubmit="return cadastrar()">
+            <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
                 <h3>AINDA NÃO É NOSSO CLIENTE?</h3>
                 <h1>CADASTRE-SE</h1>
                 <div class="form-group">
@@ -72,16 +72,21 @@
                 </div>
                 <div class="form-group">
                     <label for=""> Senha:</label>
-                    <input name="senha" type="password" class="form-input" required placeholder="insert password">
+                    <input onkeyup="validadorSenha()" id="senha" name="senha" type="password" class="form-input"
+                        required placeholder="insert password">
+                    <p id="caracter">Sua senha precisa de no mínimo 8 caracteres.</p>
+                    <p id="minuscula">Sua senha precisa conter ao menos uma letra minúscula.</p>
+                    <p id="maiuscula">Sua senha precisa conter ao menos uma letra maiúscula.</p>
+                    <p id="numero">Sua senha precisa conter um número.</p>
                 </div>
                 <input id="btn_entrar" type="submit" class="btn_login" value="Cadastrar">
             </form>
             <img src="img/loading.gif" id="img_aguarde" style="display: none; width:100px">
-    
+
             <div id="div_erro" style="background-color: black; color: cyan; display: none;">
                 Erro no cadastro
             </div>
-        
+
         </div>
 
         <!--Footer-->
@@ -90,33 +95,71 @@
             <div class="contaner_footer">
                 <ul>
                     <li><a><img src="img/icons/facebook.png" alt=""></a></li>
-                    <li><a target="_blank" href="https://github.com/Projeto-PI-Grupo-4/Health-Analytics"><img src="img/icons/github.png" alt="" "></a></li>
-                    <li><a><img src="img/icons/twitter.png" alt=""></a></li>
+                    <li><a target="_blank" href="https://github.com/Projeto-PI-Grupo-4/Health-Analytics"><img
+                                src="img/icons/github.png" alt="" "></a></li>
+                    <li><a><img src=" img/icons/twitter.png" alt=""></a></li>
                     <li><a><img src="img/icons/linkedin.png" alt=""></a></li>
                 </ul>
             </div>
-            
+
         </div>
-                  
+
 </body>
 
 </html>
 
 <script>
+    function validadorSenha() {
+
+        let password = senha.value;
+        if (password.length < 8) {
+            caracter.style.display = "block";
+        } else {
+            caracter.style.display = "none";
+        }
+
+        if (password.search(/[a-z]/) == -1) {
+            minuscula.style.display = "block";
+        } else {
+            minuscula.style.display = "none";
+        }
+
+        if (password.search(/[A-Z]/) == -1) {
+            maiuscula.style.display = "block";
+        } else {
+            maiuscula.style.display = "none";
+        }
+
+        if (password.search(/[0-9]/) == -1) {
+            numero.style.display = "block";
+        } else {
+            numero.style.display = "none";
+        }
+
+        if (password.length < 8 == true || password.search(/[a-z]/) == -1 || password.search(/[A-Z]/) == -1 || password
+            .search(/[0-9]/) == -1) {
+            senha.style = "background-color:red";
+        } else {
+            senha.style = "background-color:green";
+        }
+
+    }
+
+
 
     // <![CDATA[ 
     var ttChatLoaderS = document.createElement('script');
-            document.tomticketChatLoaderScriptVersion = 2;
-            ttChatLoaderS.src = 'https://health-analytics-2020.tomticket.com/scripts-chat/chat.min.js'
-            + '?id=EP51036'
-            + '&account=3266304P30112020054447'
-            + '&autoOpen=0'
-            + '&hideWhenOffline=0'
-            + '&d=health-analytics-2020'
-            + '&ts=' + new Date().getTime()
-            + '&ref=' + encodeURIComponent(document.URL);
-            document.body.appendChild(ttChatLoaderS);
-            //]]>
+    document.tomticketChatLoaderScriptVersion = 2;
+    ttChatLoaderS.src = 'https://health-analytics-2020.tomticket.com/scripts-chat/chat.min.js' +
+        '?id=EP51036' +
+        '&account=3266304P30112020054447' +
+        '&autoOpen=0' +
+        '&hideWhenOffline=0' +
+        '&d=health-analytics-2020' +
+        '&ts=' + new Date().getTime() +
+        '&ref=' + encodeURIComponent(document.URL);
+    document.body.appendChild(ttChatLoaderS);
+    //]]>
 
     function cadastrar() {
         aguardar();
@@ -125,10 +168,10 @@
             method: "POST",
             body: formulario
         }).then(function (response) {
-            
+
             if (response.ok) {
 
-                window.location.href='login.html';
+                window.location.href = 'login.html';
 
             } else {
 
@@ -145,14 +188,14 @@
 
     function aguardar() {
         btn_entrar.disabled = true;
-        img_aguarde.style.display='block';
-        div_erro.style.display='none';
+        img_aguarde.style.display = 'block';
+        div_erro.style.display = 'none';
     }
 
     function finalizar_aguardar() {
         btn_entrar.disabled = false;
-        img_aguarde.style.display='none';
-        div_erro.style.display='block';
+        img_aguarde.style.display = 'none';
+        div_erro.style.display = 'block';
     }
 
 
@@ -200,6 +243,4 @@
         div_erro.style.visibility = 'visible';
         div_erro.innerHTML = resposta;
     }
-
-
 </script>
