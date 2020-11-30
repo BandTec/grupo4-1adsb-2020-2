@@ -14,7 +14,7 @@ body {
 /*Header*/
 .header {
     background-image: url(img/back2.jpg);
-    height: 1200px;
+    max-height: 1500px;
     background-size: cover;
 }
 
