@@ -14,7 +14,7 @@ body {
 /*Header*/
 .header {
     background-image: url(img/back2.jpg);
-    max-height: 1350px;
+    height: 1200px;
     background-size: cover;
 }
 
@@ -88,6 +88,11 @@ body {
 
 /*container*/
 
+.form-group p{
+    font-size: 13px;
+}
+
+
 .container {
     margin: 24px 40px;
     width: 500px;
@@ -99,7 +104,6 @@ body {
 
 .container form {
     width: 80%;
-    height: 80%;
     padding: 90px;
     margin-left: 150px;
     background-color: #00CBB6;
@@ -177,6 +181,7 @@ body {
 }
 
 .footer ul {
+    padding-top: 20px;
     float: right;
     margin-right: 40%;
 }
