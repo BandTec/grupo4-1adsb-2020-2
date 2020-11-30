@@ -56,19 +56,19 @@
                 <h1>CADASTRE-SE</h1>
                 <div class="form-group">
                     <label for="">Cnpj:</label>
-                    <input type="number" name="cnpj" class="form-input" required placeholder="Insira o valor aqui">
+                    <input onkeyup="validadorCnpj()" type="number" name="cnpj" id="cnpj" class="form-input" required placeholder="00.000.000/0000-00">
                 </div>
                 <div class="form-group">
                     <label for=""> Nome da empresa:</label>
-                    <input name="nomeEmpresa" type="text" class="form-input" required placeholder="Ex: E-corp">
+                    <input onkeyup="validadorNomeEmpresa()" id="EmpNome" name="nomeEmpresa" type="text" class="form-input" required placeholder="Ex: E-corp">
                 </div>
                 <div class="form-group">
-                    <label for=""> telefone:</label>
-                    <input name="telefone" type="number" class="form-input" required placeholder="Insira o número aqui">
+                    <label for=""> Telefone:</label>
+                    <input onkeyup="validadorTell()" id="tel" name="telefone" type="number" class="form-input" required placeholder="Insira o número aqui">
                 </div>
                 <div class="form-group">
                     <label for=""> Email:</label>
-                    <input name="login" type="email" class="form-input" required placeholder="Ex: user@host.com">
+                    <input onkeyup="validadorEmail()" id="email" name="login" type="email" class="form-input" required placeholder="Ex: user@host.com">
                 </div>
                 <div class="form-group">
                     <label for=""> Senha:</label>
@@ -101,14 +101,50 @@
                     <li><a><img src="img/icons/linkedin.png" alt=""></a></li>
                 </ul>
             </div>
-
         </div>
-
 </body>
 
 </html>
 
 <script>
+    function validadorCnpj(){
+        let cpnj = cnpj.value;
+        if(cpnj.length != 18){
+            cnpj.style = 'background-color: red;';
+        } else {
+            cnpj.style = 'background-color: green;';
+        }
+    }
+
+    function validadorNomeEmpresa(){
+        let nomeEmp = EmpNome.value;
+        if(nomeEmp.length > 0 && nomeEmp.length < 45 && nomeEmp.startsWith(' ') == false && nomeEmp.endsWith(' ') == false){
+            EmpNome.style = 'background-color: green;'
+        } else {
+            EmpNome.style = 'background-color: red;';
+        }
+    }
+    
+    function validadorTell(){
+        let telefone = tel.value;
+        if(telefone.length != 12){
+            tel.style = 'background-color: red;';
+        } else {
+            tel.style = 'background-color: green;';
+        }   
+        
+    }
+
+    function validadorEmail(){
+        let Email = email.value;
+        if(Email.indexOf('@' && '.') != -1 && Email.length > 0 && Email.length < 70){
+            email.style = 'background-color: green;';
+            } else{
+            email.style = 'background-color: red;';
+        }
+    }
+
+
     function validadorSenha() {
 
         let password = senha.value;
