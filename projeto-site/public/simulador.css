@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
-
-/*global*/
 * {
     margin: 0;
     padding: 0;
@@ -12,25 +9,16 @@ body {
 }
 
 /*Header*/
-
 .header {
-    background-color: #fff;
-    min-height: 900px;
+    background-image: url(img/back2.jpg);
+    max-height: 1500px;
     background-size: cover;
-}
-
-.header2 {
-    background-color: turquoise;
-    height: 140px;
-    margin-bottom: 100px;
-
 }
 
 .header img {
     width: 350px;
     background-size: cover;
     padding: 20px 0 0 30px;
-
 }
 
 /*button*/
@@ -52,6 +40,8 @@ body {
 }
 
 
+
+
 /*nav*/
 
 .nav {
@@ -70,7 +60,7 @@ body {
 .nav a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 28px;
 
 }
 
@@ -121,27 +111,13 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-top: 120px;
+    margin-top: -10px;
     justify-content: center;
-    /* background-color: #2EC4B6; */
-    /* align-items: center; */
+
+    
 }
 
-.div_perdas {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-top: 15px;
-    justify-content: center;
-    border-bottom: 2px solid #2EC4B6;
-    padding-bottom: 5px;
-    width: 500px;
-    /* background-color: #2EC4B6; */
-}
 
-.div_perdas p {
-    font-size: 18px;
-}
 
 .container {
     display: flex;
@@ -150,7 +126,8 @@ body {
     align-items: center;
     padding-top: 4%;
     text-align: justify;
-    /* margin-left: 50px; */
+    font-size: 20px;
+    
 }
 
 .container p {
@@ -203,6 +180,7 @@ body {
     /* background-color: black; */
     display: flex;
     justify-content: center;
+    padding-left: 218px;
 }
 
 #btCalcular {
