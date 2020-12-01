@@ -25,6 +25,12 @@ body {
 
 .header img {
     width: 350px;
+    padding-top: 15px;
+    
+}
+
+#logo{
+    padding: 30px;
 }
 
 /*Fim do Header*/

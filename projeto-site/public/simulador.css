@@ -13,6 +13,11 @@ body {
 .header {
     background-color: #02695f;
     height: 130px;
+    padding-top: 30px;
+}
+
+#logo{
+    padding: 30px;
 }
 /*nav*/
 
@@ -39,6 +44,7 @@ body {
 .nav img {
     width: 45px;
     padding-left: 50px;
+    padding-top: 30px;
 }
 
 /*fim do nav*/

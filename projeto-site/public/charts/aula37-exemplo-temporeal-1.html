@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Barra valor tempo real</title>
+    
+</head>
+
+<body>
+    
+    Última leitura: <br>
+    <div style="width: 60%; background: linear-gradient(90deg, rgba(181,179,226,1) 0%, rgba(255,255,255,1) 25%, rgba(232,232,232,1) 50%, rgba(255,255,255,1) 75%, rgba(223,95,86,1) 100%);" class="gradiente">
+        <div id="div_posicao" style="margin-left:0%; font-size: 20pt;">
+            <b id="b_leitura">0</b>ºC
+        </div>
+    </div>
+
+    <br>
+    Mínimo: <b id="b_min"></b> <br>
+    Máximo: <b id="b_max"></b> <br>
+
+</body>
+
+</html>
+
+<script>
+
+    var limiteMax = 10;
+    var limiteMin = -15;
+ 
+	function receberNovasLeituras() {
+		setTimeout(() => {
+
+            // jogando o "max" e "min" para a página
+            b_max.innerHTML = limiteMax;
+            b_min.innerHTML = limiteMin;
+
+            // obtendo a temperatura dentro do range (Min - Max)
+            var temperatura = (Math.random() * (limiteMax-limiteMin) + limiteMin).toFixed(1);
+
+			// calculo de uma posição de 0 a 100% "entre" os limites min e max
+            var posicao = (temperatura - limiteMin) / (limiteMax - limiteMin) * 100;
+			
+            // posicionando o texto horizontalmente
+            div_posicao.style.marginLeft = `${posicao}%`;
+            
+            // atualizando o valor da leitura na página
+            b_leitura.innerHTML = temperatura;
+
+		    // função que agenda a recuperação da última leitura para daqui a 3 segundos
+			receberNovasLeituras();	
+
+		}, 3000); // 3000 ms -> 3 segundos
+	}
+
+	// indicando que a função "receberNovasLeituras" será invocada assim que a página carregar
+    window.onload = receberNovasLeituras;
+</script>
