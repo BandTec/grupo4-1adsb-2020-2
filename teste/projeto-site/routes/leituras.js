@@ -37,7 +37,7 @@ router.get('/ultimas/:idcaminhao', function(req, res, next) {
 
 
 // tempo real (último valor de cada leitura)
-/*router.get('/tempo-real', function (req, res, next) {
+router.get('/tempo-real', function (req, res, next) {
 	
 	console.log(`Recuperando a ultima leitura`);
 
@@ -52,7 +52,7 @@ router.get('/ultimas/:idcaminhao', function(req, res, next) {
 		});
   
 });
-*/
+
 
 router.get('/tempo-real/:idcaminhao', function(req, res, next) {
 	console.log('Recuperando caminhões');
