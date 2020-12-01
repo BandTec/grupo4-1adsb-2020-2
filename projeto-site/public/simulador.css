@@ -10,7 +10,7 @@ body {
 
 /*Header*/
 .header {
-    background-image: url(img/back2.jpg);
+    background-image: url(img/simulador.jfif);
     max-height: 1500px;
     background-size: cover;
 }
@@ -59,7 +59,7 @@ body {
 
 .nav a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 28px;
 
 }
@@ -148,7 +148,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.719);
     border-radius: 5px;
     border-bottom: 5px solid #2EC4B6;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
