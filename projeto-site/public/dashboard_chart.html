@@ -21,32 +21,26 @@
 			<!--nav-->
 			<div class="nav">
 				<ul>
-
-					<li><a href="dashboard_chart.html">Dashboard</a></li>
-					<li><a href="simulador.html">Simulador</a></li>
-					<li><a id="login" href="login.html"> <img src="img/login.png" alt=""></a></li>
+					<li>Olá, <b id="b_usuario"></b></li>
+					<li><a href="#" onclick="logoff()">Sair</a></li>
 
 				</ul>
 			</div>
-		</div>
 	</div>
-	<!--end nav-->
+</div>
+<!--end nav-->
 
-<h1 id="titulo_medicoes">MEDIÇÕES DE TEMPERATURA CRÍTICAS (°C)</h1>
-<select class="comboSet" id="setores">
-	<option value="">Escolha o setor</option>
-	<option value="allSet" onchange="todos_setores()">Todos os setores</option>
-	<option value="set1" onchange="setor_1()">Setor 1</option>
-	<option value="set2" onchange="setor_2()">Setor 2</option>
-	<option value="set3" onchange="setor_3()">Setor 3</option>
-</select>
-
+<h1 id="titulo_medicoes">TEMPERATURAS CRÍTICAS (°C)</h1>
+<p id="alta">ALTA
+<p id="baixa">BAIXA</p>
 <div class="bloco_temperatura">
-	<div class="temperatura1">
-		<p>João Ribeiro</p>
-		<h2>37.9º</h2>
+<a href="tela1.html"><div id="campo1" class="temperatura1">
+	<p>João Ribeiro</p>
+	<h2>37.9º</h2>
 		<span><b>Setor 1</b></span>
 	</div>
+</a> 
+	
 
 	<div class="temperatura1">
 		<p>Roberto Silva</p>
@@ -221,20 +215,8 @@
             document.body.appendChild(ttChatLoaderS);
 			//]]>
 			
-	function todos_setores(){
-		
-	}
+	
 
-	function setor_1(){
 
-	}
-
-	function setor_2(){
-
-	}
-
-	function setor_3(){
-
-	}
 
 </script>

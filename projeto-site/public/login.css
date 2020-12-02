@@ -21,7 +21,7 @@ body {
 .header img {
     width: 350px;
     background-size: cover;
-    padding: 20px 0 0 30px;
+    padding: 50px 0 0 100px;
 }
 
 /*button*/
@@ -95,6 +95,8 @@ body {
 
 
 .container {
+    position: relative;
+    bottom: 80px;
     margin: 24px 40px;
     width: 500px;
     max-width: 90%;
@@ -117,7 +119,7 @@ body {
 .container2 {
     position: relative;
     left: 900px;
-    bottom:530px;
+    bottom:600px;
     height: 900px;
     margin-bottom: -500px;
 }

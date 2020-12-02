@@ -1,273 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/esculápio.png">
-	<link rel="stylesheet" href="simulador.css">
-    <title>Health Analytics | </title>
+    <link rel="shortcut icon" href="/img/esculápio.png">
+    <link rel="stylesheet" href="simulador.css">
+    
+    <title>Health Analytics | Simulador FInanceiro</title>
 </head>
+
 <body>
-    <!--HEADER-->
-        <div class="foto_fundo">
-            <a href="index.html"><img src="img/logo_home_color.png" height="300px" alt=""></a>
-    
-    
-            <div class="nav">
-                <ul>
-    
-                    <li><a href="dashboard_chart.html">Dashboard</a></li>
-                    <li><a href="simulador.html">Simulador</a></li>
-                    <li><a id="login" href="login.html"> <img src="img/login_white.png" alt=""></a></li>
-    
-                </ul>
-            </div>
-            
+     <!--HEADER-->
 
-            <div class="fundo">
-                <div class="back_color" style="text-align: center;"><br><br>
-                <h1>Simulador Financeiro | Health Analytics</h1></header><br><br><br>
-                    <h3>Quantidade de Funcionarios:</h3> <br>
-                    <input id="numF" type="number" style="font-size: 18px;">
-                    <br><br><br>
-                    <h3>Quantidade de entradas:</h3><br>
-                    <input id="ent" type="number" id="qtd_entrada"><br><br><br>
+     <div class="header">
+        <a href="index.html"><img src="img/logo_home_color_dark.png" alt=""></a>
 
-                    <button id="button_cal" onclick="calcular()"><span> Calcular</span></button>
-                </div>
-                    <!-- <h2>Mediana dos Salarios: </h2> <br>
-                    <input type="text" id="salM"> -->
-                <div class="back_color1">
-                    <h3>Total simulação:</h3> <br><br>
-                    <div id="totens"></div> <br>
-                    <div id="ganho"></div> <br>
-                    <div id="gasto"></div> <br>
-                    <div id="mensal"></div> <br>
-                    <div id="plano"></div> <br>
-                </div>
-            </div>
+
+        <div class="nav">
+            <ul>
+                <li><a id="login" href="login.html"> <img src="img/login.png" alt=""></a></li>
+
+            </ul>
         </div>
+        <!--Fim do Header-->
 
-        <!--Footer-->
-    <div class="footer" id="contato">
+        <!--Login-->
+
+
+        <section class="section">
+
+            <div class="container">
+                <p>Considerando a “Segurança e Medicina do Trabalho”, é responsabilidade de uma empresa se envolver em
+                    aspectos como saúde e relações.</p>
+                <p>Atualmente, estima-se que para cada US$ 1 investido em prevenção, US$ 4 são gerados para a empresa devido
+                    ao aumento da produtividade.</p>
+                <p>Além de que os custos de um acidente ou de uma doença ocupacional podem trazer sérios prejuízos a uma
+                    corporação, como encargos com advogados, perda de tempo e de materiais e redução na produção. </p>
+                <p>Sendo assim, é muito mais simples investir na prevenção e na regularização da segurança, evitando futuras
+                    complicações.</p>
+                
+            </div>
+    
+            <div class="containerTwo">
+                <div class="divInput">
+                    <p>Quantidade de entradas</p>
+                    <input class="input" type="number" name="qtd_entradas" id="qtd_entradas" placeholder="Ex: 3">
+                </div>
+
+
+                <div class="divInput">
+                    <p>Número de funcionários</p>
+                    <input class="input" type="number" name="num_funcionarios" id="num_funcionarios" placeholder="Ex: 10">
+                </div>
+    
+                <div class="button">
+                    <button id="btCalcular" onclick="calcular()">Calcular</button>
+                </div>
+    
+                <div class="divInput">
+                    <p>Totens recomendados</p>
+                    <input class="input" type="text" disabled name="num_totens" id="num_totens">
+                    
+                </div>
+    
+                <div class="divInput">
+                    <p>Investimento inicial</p>
+                    <input class="input" type="text" disabled name="investimento_inicial" id="investimento_inicial"
+                        placeholder="R$">
+                </div>
+    
+                <div class="divInput">
+                    <p>Investimento mensal</p>
+                    <input class="input" type="text" disabled name="investimento_mensal" id="investimento_mensal"
+                        placeholder="R$">
+                        
+                </div>
+    
+                <div class="divInput">
+                    <p>Ganho</p>
+                    <input class="input" type="text" disabled name="lucro" id="lucro" placeholder="R$">
+                </div>
+            </div>
+    
+    
+        </section>
+
+    <!--footer-->
+    <div class="footer">
         <div class="contaner_footer">
             <ul>
-                <li><a><img src="img/icons/facebook.png" alt=""></a></li>
-                <li><a target="_blank" href="https://github.com/Projeto-PI-Grupo-4/Health-Analytics"><img
-                            src="img/icons/github.png" alt=""></a></li>
-                <li><a><img src="img/icons/twitter.png" alt=""></a></li>
-                <li><a><img src="img/icons/linkedin.png" alt=""></a></li>
+                <li><a><img src="/img/icons/facebook.png" alt=""></a></li>
+                <li><a target="_blank" href="https://github.com/Projeto-PI-Grupo-4/Health-Analytics"><img src="/img/icons/github.png" alt="" "></a></li>
+                <li><a><img src="/img/icons/twitter.png" alt=""></a></li>
+                <li><a><img src="/img/icons/linkedin.png" alt=""></a></li>
+
+
+
             </ul>
         </div>
     </div>
-    <!--Fim do footer-->
+    <!--footer finish-->
+
+    <script src="simulador.js"></script>
 
 </body>
-</html>
-<script>
 
-    // <![CDATA[ 
-    var ttChatLoaderS = document.createElement('script');
-            document.tomticketChatLoaderScriptVersion = 2;
-            ttChatLoaderS.src = 'https://health-analytics-2020.tomticket.com/scripts-chat/chat.min.js'
-            + '?id=EP51036'
-            + '&account=3266304P30112020054447'
-            + '&autoOpen=0'
-            + '&hideWhenOffline=0'
-            + '&d=health-analytics-2020'
-            + '&ts=' + new Date().getTime()
-            + '&ref=' + encodeURIComponent(document.URL);
-            document.body.appendChild(ttChatLoaderS);
-            //]]>
-
-    function calcular(){
-        var qtd_fun = Number(numF.value);
-        var qtd_entradas = Number(ent.value);
-        var preco_totem = 1300;
-        var mensalidade = 120;
-        var planB = 1000;
-        var planI = 2000;
-        var planA = 5000;
-
-        if (qtd_fun < 40 && qtd_entradas == 1){
-            totens.innerHTML = `É recomendado que você tenha <b>1</b> totem!`;
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: R$<u>${(preco_totem).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: R$${(preco_totem*1).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você utilize o plano A: R$${(planB)}`;
-
-        } else if (qtd_fun >= 40  && qtd_fun < 60 && qtd_entradas == 1){
-            totens.innerHTML = `É recomendado que você tenha <b>2</b> totens!`;
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *2).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 2 / 10).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você adquira o plano A:R$${planB}`;
-
-        } else if (qtd_fun >= 60  && qtd_fun < 100 && qtd_entradas == 1){
-            totens.innerHTML= 'É recomendado que você tenha <b>2</b> totens!';
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *2).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 2 / 10).toFixed(2)}`;
-            plano.innerHTML  = `É recomendado que você adquira o plano A:R$${planB}`;
-
-        } else if (qtd_fun >= 100  && qtd_fun < 300 && qtd_entradas == 1){
-            totens.innerHTML = 'É recomendado que voce tenha <b>3</b> totens!';
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem * 3).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 3 / 10).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você adquira o plano A:R$${planB}`;
-
-        } else if (qtd_fun >= 300 && qtd_entradas == 1){
-            totens.innerHTML = 'É recomendado que voce tenha <b>2</b> totens!';
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 2 / 10).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você adquira o plano A:R$${planB}`;
-
-
-        } else if(qtd_fun < 40  && qtd_fun < 60 && qtd_entradas == 2){
-            totens.innerHTML = 'É recomendado que voce tenha <b>2</b> totens!';
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *2).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 2 / 10).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você adquira o plano A:R$${planB}`;
-
-
-        } else if(qtd_fun >= 60  && qtd_fun < 100 && qtd_entradas == 2){
-            totens.innerHTML = 'É recomendado que voce tenha <b>2</b> totens!';
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *2).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 2 / 10).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você adquira o plano A:R$${planB}`;
-
-
-        } else if(qtd_fun >= 100  && qtd_fun < 300 && qtd_entradas == 2){
-            totens.innerHTML = 'É recomendado que voce tenha <b>3</b> totens!';
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *3).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 3 / 10).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você adquira o plano A:R$${planB}`;
-
-
-        } else if(qtd_fun >= 300 && qtd_entradas == 2){
-            totens.innerHTML = 'É recomendado que voce tenha <b>6</b> totens!';
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *6).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 6 / 10).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você adquira o plano A:R$${planI}`;
-
-
-        } else if(qtd_fun < 40  && qtd_fun < 60 && qtd_entradas == 3){
-            totens.innerHTML = 'É recomendado que voce tenha <b>3</b> totens!';
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *3).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 3 / 10).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você adquira o plano A:R$${planI}`;
-        
-
-        } else if(qtd_fun >= 60  && qtd_fun < 100 && qtd_entradas == 3){
-            totens.innerHTML = 'É recomendado que voce tenha <b>3</b> totens!';
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *3).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 3 / 10).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você adquira o plano A:R$${planI}`;
-
-
-        } else if(qtd_fun >= 100  && qtd_fun < 300 && qtd_entradas == 3){
-            totens.innerHTML = 'É recomendado que voce tenha <b>5</b> totens!';
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *5).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 5 / 10).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você adquira o plano A:R$${planI}`;
-
-        } else if(qtd_fun >= 300 && qtd_entradas == 3){
-            totens.innerHTML = 'É recomendado que voce tenha <b>6</b> totens!';
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *6).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 6 / 10).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você adquira o plano A:R$${planI}`;
-
-
-        } else if(qtd_fun < 40  && qtd_fun < 60 && qtd_entradas == 4){
-            totens.innerHTML = 'É recomendado que voce tenha <b>4</b> totens!';
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *4).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 4 / 10).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você adquira o plano A:R$${planI}`;
-
-
-        } else if(qtd_fun >= 60  && qtd_fun < 100 && qtd_entradas == 4){
-            totens.innerHTML = 'É recomendado que voce tenha <b>6</b> totens!';
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *6).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 6 / 10).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você adquira o plano A:R$${planI}`;
-
-
-        } else if(qtd_fun >= 100  && qtd_fun < 300 && qtd_entradas == 4){
-            totens.innerHTML = 'É recomendado que voce tenha <b>8</b> totens!';
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *8).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 8 / 10).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você adquira o plano A:R$${planI}`;
-
-
-        } else if(qtd_fun >= 300 && qtd_entradas == 4){
-            totens.innerHTML = 'É recomendado que voce tenha <b>8</b> totens!';
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *8).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 8 / 10).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você adquira o plano A:R$${planI}`;
-
-        } else if(qtd_fun < 40  && qtd_fun < 60 && qtd_entradas == 5){
-            totens.innerHTML = 'É recomendado que voce tenha <b>5</b> totens!';
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *5).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 5 / 10).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você adquira o plano A:R$${planI}`;
-
-        } else if(qtd_fun >= 60  && qtd_fun < 100 && qtd_entradas == 5){
-            totens.innerHTML = 'É recomendado que voce tenha <b>7</b> totens!';
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *7).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 7 / 10).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você adquira o plano Avançado: R$${planA}`;
-
-        } else if(qtd_fun >= 100  && qtd_fun < 300 && qtd_entradas == 5){
-            totens.innerHTML = 'É recomendado que voce tenha <b>8</b> totens!';
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *8).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 8 / 10).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você adquira o plano Avançado: R$${planA}`;
-
-        } else if(qtd_fun >= 300 && qtd_entradas == 5){
-            totens.innerHTML = 'É recomendado que voce tenha <b>10</b> totens!';
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *10).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 8 / 10).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você adquira o plano Avançado: R$${planA}`;
-
-        } else if(qtd_fun < 40  && qtd_fun < 60 && qtd_entradas == 6){
-            totens.innerHTML = 'É recomendado que voce tenha <b>6</b> totens!';
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *6).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 8 / 10).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você adquira o plano Avançado: R$${planA}`;
-
-        } else if(qtd_fun >= 60  && qtd_fun <= 100 && qtd_entradas == 6){
-            totens.innerHTML = 'É recomendado que voce tenha <b>6</b> totens!';
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *6).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 8 / 10).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você adquira o plano Avançado: R$${planA}`;
-
-        } else if(qtd_fun > 100  && qtd_fun <= 300 && qtd_entradas == 6){
-            totens.innerHTML = 'É recomendado que voce tenha <b>10</b> totens!';
-            ganho.innerHTML = 'Seu lucro será de: R$1996,00';
-            gasto.innerHTML = `O gasto total será de: <u>${(preco_totem *10).toFixed(2)}</u>`;
-            mensal.innerHTML = `O valor da mensalidade será de: ${(preco_totem * 8 / 10).toFixed(2)}`;
-            plano.innerHTML = `É recomendado que você adquira o plano Avançado: R$${planA}`;
-
+<<<<<<< HEAD
         } else if(qtd_fun > 300  && qtd_entradas == 6){
             totens.innerHTML = 'É recomendado que voce tenha <b>12</b> totens!';
             ganho.innerHTML = 'Seu lucro será de: R$1996,00';
@@ -283,3 +122,6 @@
         }
     }
 </script>
+=======
+</html>
+>>>>>>> 8d62cf43b4657b4d2f31e27c9dfd8c763badc6c7

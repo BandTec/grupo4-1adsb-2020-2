@@ -73,14 +73,14 @@ body {
 .nav {
     float:right;
     margin-right: 50px; 
+    padding-top: 30px
   ; 
 }
 
 .nav li {
     display: inline-block;
-    padding: 30px 30px 0 20px;
-    
-  
+    padding: 40px 30px 0 20px;
+    font-size: 30px;
 }
 
  .nav a {
@@ -105,7 +105,7 @@ body {
  }
 
  .temperatura1{
-    background-color: rgb(255, 0, 0);
+    background-color: #F0803C;
     height: 200px;
     width: 233px;
     border-radius: 7px;
@@ -126,7 +126,7 @@ padding-top: 15px;
 
 
 .temperatura2{
-    background-color: #0000ffaf;
+    background-color: #225560;
     height: 200px;
     width: 233px;
     border-radius: 7px;
