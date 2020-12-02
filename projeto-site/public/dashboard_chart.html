@@ -4,8 +4,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Dashboard</title>
-	<script src="https://www.chartjs.org/dist/2.9.3/Chart.min.js"></script>
-	<script src="https://www.chartjs.org/samples/latest/utils.js"></script>
 	<link rel="shortcut icon" href="img/esculápio.png">
 	<link rel="stylesheet" href="dashboard_chart.css">
 
@@ -31,11 +29,15 @@
 <!--end nav-->
 
 <h1 id="titulo_medicoes">TEMPERATURAS CRÍTICAS (°C)</h1>
-<p id="alta">ALTA
+<div class="analytics">
+<p id="alta">ALTA</p>
 <p id="baixa">BAIXA</p>
+</div>
+
 <div class="bloco_temperatura">
+
 <a href="tela1.html"><div id="campo1" class="temperatura1">
-	<p>João Ribeiro</p>
+	<p>F. Brandão</p>
 	<h2>37.9º</h2>
 		<span><b>Setor 1</b></span>
 	</div>
@@ -115,25 +117,27 @@
 
 
 
-	<div onclick="Fernando()" class="temperatura2">
+	<div  class="temperatura2">
 		<p>Fernando Brandão</p>
 		<h2>34°</h2>
 		<span><b>Setor 3</b></span>
 	</div>
 
-
-	<div onclick=" Kaline()" class="temperatura1">
+<a href="tela3.html">
+	<div  class="temperatura1">
 		<p>Kaline Barreira</p>
 		<h2>39°</h2>
 		<span><b>Setor 3</b></span>
 	</div>
+</a>
 
-
+	<a href="tela2.html">
 	<div class="temperatura2">
 		<p>Eduardo Verri</p>
 		<h2>34°</h2>
 		<span><b>Setor 2</b></span>
 	</div>
+</a>
 
 
 
