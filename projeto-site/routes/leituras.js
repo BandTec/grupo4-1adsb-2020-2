@@ -4,12 +4,12 @@ var sequelize = require('../models').sequelize;
 var Leitura = require('../models').Leitura;
 
 /* Recuperar as últimas N leituras */
-router.get('/ultimas/:idcaminhao', function(req, res, next) {
+router.get('/ultimas/:idLeitura', function(req, res, next) {
 	
 	// quantas são as últimas leituras que quer? 8 está bom?
 	const limite_linhas = 7;
 
-	var idcaminhao = req.params.idcaminhao;
+	var idLeitura = req.params.idLeitura;
 
 	console.log(`Recuperando as ultimas ${limite_linhas} leituras`);
 	
@@ -19,7 +19,7 @@ router.get('/ultimas/:idcaminhao', function(req, res, next) {
 						momento,
 						FORMAT(momento,'HH:mm:ss') as momento_grafico
 						from leitura
-						where idcaminhao = ${idcaminhao}
+						where idLeitura = ${idLeitura}
 						order by id desc`;
 
 	sequelize.query(instrucaoSql, {
@@ -54,11 +54,11 @@ router.get('/ultimas/:idcaminhao', function(req, res, next) {
 });
 */
 
-router.get('/tempo-real/:idcaminhao', function(req, res, next) {
+router.get('/tempo-real/:idLeitura', function(req, res, next) {
 	console.log('Recuperando caminhões');
 
 	//var idcaminhao = req.body.idcaminhao; // depois de .body, use o nome (name) do campo em seu formulário de login
-	var idcaminhao = req.params.idcaminhao;
+	var idLeitura = req.params.idLeitura;
 
 	let instrucaoSql = `select top 1 temperatura, umidade, FORMAT(momento,'HH:mm:ss') as momento_grafico, idcaminhao from leitura where idcaminhao = ${idcaminhao} order by id desc`;
 	console.log(instrucaoSql);
