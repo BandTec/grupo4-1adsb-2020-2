@@ -18,7 +18,7 @@ body {
 .header img {
     width: 350px;
     background-size: cover;
-    padding: 20px 0 0 30px;
+    padding: 40px 0 0 100px;
 }
 
 /*button*/
@@ -66,11 +66,12 @@ body {
 
 .nav img {
     width: 45px;
-    padding-left: 50px;
+    padding: 30px;
+
+ 
 }
 
 /*showcase*/
-
 
 .showcase {
     padding-left: 60px;
@@ -164,7 +165,7 @@ body {
 }
 
 .input {
-    height: 20px;
+    
     padding: 5px;
     margin-left: 3%;
     border-radius: 5px;
