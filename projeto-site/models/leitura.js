@@ -7,8 +7,8 @@ https://codewithhugo.com/sequelize-data-types-a-practical-guide/
 
 module.exports = (sequelize, DataTypes) => {
     let Leitura = sequelize.define('Leitura',{	
-		id: {
-			field: 'id',
+		idleitura: {
+			field: 'idleitura',
 			type: DataTypes.INTEGER,
 			primaryKey: true,
 			autoIncrement: true
@@ -17,12 +17,7 @@ module.exports = (sequelize, DataTypes) => {
 			field: 'temperatura',
 			type: DataTypes.REAL,
 			allowNull: false
-		},
-		umidade: {
-			field: 'umidade',
-			type: DataTypes.REAL,
-			allowNull: false
-		},
+		},	
 		momento: {
 			field: 'momento',
 			type: DataTypes.DATE, // NÃO existe DATETIME. O tipo DATE aqui já tem data e hora
