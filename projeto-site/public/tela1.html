@@ -6,6 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto IoT - Gráficos</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="funcoes.js"></script>
+
+    <!-- scripts do Chart.js -->
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+    <script type="text/javascript" src="https://www.chartjs.org/samples/latest/utils.js"></script>
+    <script type="text/javascript" src="funcoes.js"></script>
    
 </head>
 
@@ -20,7 +27,7 @@
 
     <div class="charts">
             <button class="btn" onclick="chamargraficos(1)">Temperatura</button>
-            <canvas id="canvas_grafico"></canvas>
+            <!-- <canvas id="canvas_grafico"></canvas> -->
         </div>
     </div>
 </body>
@@ -40,7 +47,7 @@
 
     }
 
-    verificar_autenticacao();
+    // verificar_autenticacao();
 
     // neste JSON tem que ser 'labels', 'datasets' etc, 
     // porque é o padrão do Chart.js
@@ -194,7 +201,7 @@
 
     function sendData() {
         var http = new XMLHttpRequest();
-        http.open('GET', 'http://localhost:9000/api/sendData', false);
+        http.open('GET', 'http://localhost:3000/tela1', false);
         http.send(null);
     }
 
