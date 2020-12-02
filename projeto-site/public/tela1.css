@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.fundo {
+    background-color: rgb(23, 124, 124);
+    height: 1000px;
+}
+img {
+    height: 250px;
+    border-color: rgb(12, 102, 102);
+    border-style: solid;
+    margin: 50px 50px 20px 50px;
+    border-radius: 10px;
+}
+.perfil {
+    background-color: rgb(214, 233, 235);
+    width: 450px;
+    height: 500px;
+    float: left;
+    text-align: center;
+    margin: 0px 100px 100px 150px;
+    border-radius: 100px;
+    font-size: 18px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+}
+button {
+    margin: 20px;
+    height: 30px;
+    width: 200px;
+    font-size: 18px;
+    background-color: white;
+    color: rgb(12, 102, 102);
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+button:hover{
+background-color: rgb(12, 102, 102);
+color: white;
+}
+p {
+    text-align: justify;
+    margin: 0 0 0 100px;
+}
+#voltar {
+    margin: 50px;
+    height: 30px;
+    width: 100px;
+    font-size: 18px;
+    background-color: white;
+    color: rgb(12, 102, 102);
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 10px; 
+
+}
+#voltar:hover{
+    background-color: rgb(12, 102, 102);
+    color: white;
+    }
