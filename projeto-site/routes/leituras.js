@@ -4,22 +4,21 @@ var sequelize = require('../models').sequelize;
 var Leitura = require('../models').Leitura;
 
 /* Recuperar as últimas N leituras */
-router.get('/ultimas/:idLeitura', function(req, res, next) {
+router.get('/ultimas/:idleitura', function(req, res, next) {
 	
 	// quantas são as últimas leituras que quer? 8 está bom?
 	const limite_linhas = 7;
 
-	var idLeitura = req.params.idLeitura;
+	var idleitura = req.params.idleitura;
 
 	console.log(`Recuperando as ultimas ${limite_linhas} leituras`);
 	
 	const instrucaoSql = `select top ${limite_linhas} 
 						temperatura, 
-						umidade, 
 						momento,
 						FORMAT(momento,'HH:mm:ss') as momento_grafico
 						from leitura
-						where idLeitura = ${idLeitura}
+						where idleitura = ${idleitura}
 						order by id desc`;
 
 	sequelize.query(instrucaoSql, {
@@ -41,7 +40,7 @@ router.get('/ultimas/:idLeitura', function(req, res, next) {
 	
 	console.log(`Recuperando a ultima leitura`);
 
-	const instrucaoSql = `select top 4 temperatura, umidade, FORMAT(momento,'HH:mm:ss') as momento_grafico, idcaminhao from leitura order by id desc`;
+	const instrucaoSql = `select top 4 temperatura, FORMAT(momento,'HH:mm:ss') as momento_grafico, idleitura from leitura order by id desc`;
 
 	sequelize.query(instrucaoSql, { type: sequelize.QueryTypes.SELECT })
 		.then(resultado => {
@@ -54,13 +53,13 @@ router.get('/ultimas/:idLeitura', function(req, res, next) {
 });
 */
 
-router.get('/tempo-real/:idLeitura', function(req, res, next) {
-	console.log('Recuperando caminhões');
+router.get('/tempo-real/:idleitura', function(req, res, next) {
+	console.log('Recuperando leituras');
 
-	//var idcaminhao = req.body.idcaminhao; // depois de .body, use o nome (name) do campo em seu formulário de login
-	var idLeitura = req.params.idLeitura;
+	//var idleitura = req.body.idleitura; // depois de .body, use o nome (name) do campo em seu formulário de login
+	var idleitura = req.params.idleitura;
 
-	let instrucaoSql = `select top 1 temperatura, umidade, FORMAT(momento,'HH:mm:ss') as momento_grafico, idcaminhao from leitura where idcaminhao = ${idcaminhao} order by id desc`;
+	let instrucaoSql = `select top 1 temperatura, FORMAT(momento,'HH:mm:ss') as momento_grafico, idleitura from leitura where idleitura = ${idleitura} order by id desc`;
 	console.log(instrucaoSql);
 
 	sequelize.query(instrucaoSql, { type: sequelize.QueryTypes.SELECT })
@@ -81,9 +80,6 @@ router.get('/estatisticas', function (req, res, next) {
 							max(temperatura) as temp_maxima, 
 							min(temperatura) as temp_minima, 
 							avg(temperatura) as temp_media,
-							max(umidade) as umidade_maxima, 
-							min(umidade) as umidade_minima, 
-							avg(umidade) as umidade_media 
 						from leitura`;
 
 	sequelize.query(instrucaoSql, { type: sequelize.QueryTypes.SELECT })
