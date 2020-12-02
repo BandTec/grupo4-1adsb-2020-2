@@ -1,8 +1,8 @@
 var configuracoes = {
-    server: "SEU_BANCO_DE_DADOS.database.windows.net",
-    user: "SEU_USUARIO",
-    password: "SUA_SENHA",
-    database: "SEU_BANCO_DE_DADOS",
+    server: "db-grupo4.database.windows.net",
+    user: "HealthAnalytics",
+    password: "#Gfgrupo4A",
+    database: "bd-grupo4",
     options: {
       encrypt: true,
       enableArithAbort: true,

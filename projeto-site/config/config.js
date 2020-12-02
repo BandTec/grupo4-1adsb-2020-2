@@ -1,7 +1,7 @@
 module.exports = {
   production: {
     username: 'HealthAnalytics',
-    password: '',
+    password: '#Gfgrupo4',
     database: 'bd-grupo4',
     host: 'db-grupo4.database.windows.net',
     dialect: 'mssql',
