@@ -36,6 +36,7 @@ router.get('/ultimas/:idleitura', function(req, res, next) {
 
 
 // tempo real (último valor de cada leitura)
+
 router.get('/tempo-real', function (req, res, next) {
 	
 	console.log(`Recuperando a ultima leitura`);
@@ -53,10 +54,11 @@ router.get('/tempo-real', function (req, res, next) {
 });
 
 
+
 router.get('/tempo-real/:idleitura', function(req, res, next) {
 	console.log('Recuperando leituras');
 
-	//var idleitura = req.body.idleitura; // depois de .body, use o nome (name) do campo em seu formulário de login
+	var idleitura = req.body.idleitura; // depois de .body, use o nome (name) do campo em seu formulário de login
 	var idleitura = req.params.idleitura;
 
 	let instrucaoSql = `select top 1 temperatura, FORMAT(momento,'HH:mm:ss') as momento_grafico, idleitura from leitura where idleitura = ${idleitura} order by id desc`;

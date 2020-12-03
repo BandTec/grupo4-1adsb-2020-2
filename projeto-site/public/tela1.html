@@ -6,16 +6,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto IoT - Gráficos</title>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript" src="funcoes.js"></script>
- <!-- script do google charts -->
- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
- <script type="text/javascript" src="funcoes.js"></script>
+   <!-- script do google charts -->
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <script type="text/javascript" src="funcoes.js"></script>
 
- <!-- scripts do Chart.js -->
- <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
- <script type="text/javascript" src="https://www.chartjs.org/samples/latest/utils.js"></script>
- <script type="text/javascript" src="funcoes.js"></script>
+   <!-- scripts do Chart.js -->
+   <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+   <script type="text/javascript" src="https://www.chartjs.org/samples/latest/utils.js"></script>
+   <script type="text/javascript" src="funcoes.js"></script>
+
 
     <link rel="stylesheet" href="tela_funcionario.css">
    
@@ -37,6 +36,7 @@
 </head>
 
 <body>
+    <h3>Olá, <b id="b_usuario"></b></h3>
     <div class="fundo">
     <a href="dashboard_chart.html"><button id="voltar">voltar</button></a><br>
     <div class="perfil">
@@ -45,16 +45,16 @@
         <p><b>Setor:</b> 1.</p>
         <p><b>Tipo Sanguíneo:</b> O-</p>
         <p><b>Data de nascimento:</b> 00/00/0000</p>
-        <button class="btn" onclick="chamargraficos(1)">Temperatura</button>
+        <button class="btn">Temperatura</button>
     </div>
 
     </div>
 
     <div class="dashboard">
-        <button class="btn" onclick="chamargraficos(1)">Caminhão 1</button>
-        <button class="btn" onclick="chamargraficos(2)">Caminhão 2</button>
-        <button class="btn" onclick="chamargraficos(3)">Caminhão 3</button>
-        <button class="btn" onclick="chamargraficos(4)">Caminhão 4</button>
+        <button class="btn" onclick="chamargraficos(1)">Usuario 1</button>
+        <button class="btn" onclick="chamargraficos(2)">Usuario 2</button>
+        <button class="btn" onclick="chamargraficos(3)">Usuario 3</button>
+        <button class="btn" onclick="chamargraficos(4)">Usuario 4</button>
         <div style="width:75%; margin: auto">
             <div id="div_aguarde">Dados sendo obtidos...</div>
             <canvas id="canvas_grafico"></canvas>
@@ -66,7 +66,10 @@
 </html>
 
 <script>
+     let usuario;
     
+    verificar_autenticacao();
+
     let proximaAtualizacao;
 
     window.onload = obterDadosGraficoPrimeiraVez(1);
@@ -96,7 +99,7 @@
             stacked: false,
             title: {
                 display: true,
-                text: 'Histórico recente de temperatura e umidade'
+                text: 'Histórico recente de temperatura'
             },
             scales: {
                 yAxes: [{
@@ -186,7 +189,7 @@
                     dados.datasets[0].data.push(novoRegistro.temperatura); // incluir uma nova leitura de temperatura
                    
 
-                    console.log("meu caminhão é o " + idleitura)
+                    console.log("meu usuario é o " + idleitura)
 
                     window.grafico_linha.update();
 
