@@ -1,7 +1,7 @@
 var configuracoes = {
     server: "db-grupo4.database.windows.net",
     user: "HealthAnalytics",
-    password: "#Gfgrupo4A",
+    password: "#Gfgrupo4",
     database: "bd-grupo4",
     options: {
       encrypt: true,

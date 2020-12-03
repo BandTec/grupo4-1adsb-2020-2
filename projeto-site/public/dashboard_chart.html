@@ -10,7 +10,23 @@
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script type="text/javascript" src="funcoes.js"></script>
 
+	<style>
+        /* Classes CSS para exemplos de alertas */
 
+        .normal {
+            background-color: white;
+        }
+
+        .alerta-alto {
+            color: tomato;
+            
+        }
+
+        .alerta-baixo {
+            color: rgb(38, 0, 255);
+            
+        }
+    </style>
 </head>
 
 <body onload="atualizacaoPeriodica()">
@@ -20,56 +36,42 @@
 		<div class="header2">
 			<a href="index.html"><img src="img/logo_home_color_dark.png" alt=""></a>
 
-			<!--nav-->
-			<div class="nav">
-				<ul>
-					<li>Olá, <b id="b_usuario"></b></li>
-					<li><a href="#" onclick="logoff()">Sair</a></li>
-
-				</ul>
-			</div>
-		</div>
-	</div>
-	<!--end nav-->
-
-	<h1 id="titulo_medicoes">TEMPERATURAS CRÍTICAS (°C)</h1>
-	<div class="analytics">
-		<p id="alta">ALTA</p>
-		<p id="baixa">BAIXA</p>
-	</div>
-
-	<div class="bloco_temperatura">
 
 		<a href="tela1.html">
-			<div id="campo1" class="temperatura1">
-				<p>F. Brandão</p>
-				<h2>37.9º</h2>
+			<div  class="temperatura1">
+				<p name="nameleitura" id="idleitura" value="1">F. Brandão</p>
+				<h2 id="div_temperatura">37.9º</h2>
 				<span><b>Setor 1</b></span>
 			</div>
 		</a>
+		<div class="alerta" id="div_alerta_temperatura"> </div>
 
 
 		<div class="temperatura1">
-			<p>Roberto Silva</p>
-			<h2>39°</h2>
+			<p name="nameleitura" id="idleitura" value="2">Roberto Silva</p>
+			<h2 id="div_temperatura2">39°</h2>
 			<span><b>Setor 2</b></span>
 		</div>
+		<div class="alerta" id="div_alerta_temperatura2"> </div>
 
 
 		<div class="temperatura1">
-			<p>Julio Santos</p>
-			<h2>39°</h2>
+			<p name="nameleitura" id="idleitura" value="3">Julio Santos</p>
+			<h2 id="div_temperatura3">39°</h2>
 			<span><b>Setor 2</b></span>
 		</div>
+		<div class="alerta" id="div_alerta_temperatura3"> </div>
 
 
 
 		<div class="temperatura2">
-			<p>Joana Roberta</p>
-			<h2>34°</h2>
+			<p name="nameleitura" id="idleitura" value="4">Joana Roberta</p>
+			<h2 id="div_temperatura4">34°</h2>
 			<span><b>Setor 2</b></span>
 		</div>
+		<div class="alerta" id="div_alerta_temperatura4"> </div>
 
+		<!--
 		<div class="temperatura2">
 			<p>Natan Oliveira</p>
 			<h2>34°</h2>
@@ -189,6 +191,7 @@
 			<span><b>Setor 2</b></span>
 		</div>
 	</div>
+	-->
 
 
 	<!--footer-->
