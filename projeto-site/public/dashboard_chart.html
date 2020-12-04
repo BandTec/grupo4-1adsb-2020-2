@@ -44,214 +44,216 @@
 			<select id="setoresGerais" onchange="setores()" style="width: 260px; font-size:20pt;">
 				<option value="">Selecione um setor</option>
 				<option id="todosSetores" style="display: none;" value="allsectors">Todos setores</option>
-				<option value="setor1">Setor 1</option>
-				<option value="setor2">Setor 2</option>
+				<option id="op_setor1" value="setor1">Setor 1</option>
+				<option id="op_setor2" value="setor2">Setor 2</option>
 			</select></h3>
 
-		<div id="div_alertas_criticos">
-			<a style="color: black;" href="tela1.html">
-				<div id="div_alerta_temperatura" class="temperatura1">
-					<p name="nameleitura" id="idleitura" value="1">Marcos Santos</p>
-					<h2 id="div_temperatura">0º</h2>
+		<div id="geral">
+           
+			<div id="div_alertas_criticos">
+				<a style="color: black;" href="tela1.html">
+					<div id="div_alerta_temperatura" class="temperatura1">
+						<p name="nameleitura" id="idleitura" value="1">Marcos Santos</p>
+						<h2 id="div_temperatura">0º</h2>
+						<span><b>Setor 1</b></span>
+					</div>
+				</a>
+
+
+				<a style="color: black;" href="tela2.html">
+					<div id="div_alerta_temperatura2" class="temperatura1">
+						<p name="nameleitura" id="idleitura" value="2">Maria Clara Silva</p>
+						<h2 id="div_temperatura2">0°</h2>
+						<span><b>Setor 2</b></span>
+					</div>
+				</a>
+
+				<a style="color: black;" href="tela3.html">
+					<div id="div_alerta_temperatura3" class="temperatura1">
+						<p name="nameleitura" id="idleitura" value="3">Rogerio Souza </p>
+						<h2 id="div_temperatura3">0°</h2>
+						<span><b>Setor 2</b></span>
+					</div>
+				</a>
+
+
+				<a style="color: black;" href="tela4.html">
+					<div id="div_alerta_temperatura4" class="temperatura1">
+						<p name="nameleitura" id="idleitura" value="4"> Larissa Paula</p>
+						<h2 id="div_temperatura4">0°</h2>
+						<span><b>Setor 2</b></span>
+					</div>
+				</a>
+
+
+				<div class="temperatura1 alerta-baixo">
+					<p>Natan Oliveira</p>
+					<h2>33°</h2>
+					<span><b>Setor 2</b></span>
+				</div>
+
+
+				<div class="temperatura1 alerta-baixo">
+					<p>Eduardo Verri</p>
+					<h2>34°</h2>
+					<span><b>Setor 2</b></span>
+				</div>
+
+				<div class="temperatura1 normal">
+					<p>Fabio da Silva</p>
+					<h2>36°</h2>
 					<span><b>Setor 1</b></span>
 				</div>
-			</a>
 
 
-			<a style="color: black;" href="tela2.html">
-				<div id="div_alerta_temperatura2" class="temperatura1">
-					<p name="nameleitura" id="idleitura" value="2">Maria Clara Silva</p>
-					<h2 id="div_temperatura2">0°</h2>
+				<div class="temperatura1 normal">
+					<p>Julia Abraão</p>
+					<h2>37°</h2>
+					<span><b>Setor 1</b></span>
+				</div>
+
+
+				<div class="temperatura1 alerta-alto">
+					<p>Cida Moura</p>
+					<h2>39°</h2>
+					<span><b>Setor 3</b></span>
+				</div>
+
+
+
+				<div class="temperatura1 alerta-baixo">
+					<p>Kevin Santos</p>
+					<h2>33°</h2>
+					<span><b>Setor 3</b></span>
+				</div>
+
+
+				<div class="temperatura1 alerta-alto">
+					<p>Bianca Costa</p>
+					<h2>39°</h2>
+					<span><b>Setor 3</b></span>
+				</div>
+
+
+				<div class="temperatura1 normal">
+					<p>Vinicius Carvalho</p>
+					<h2>36°</h2>
+					<span><b>Setor 3</b></span>
+				</div>
+
+
+				<div class="temperatura1 alerta-baixo">
+					<p>Martin Santana</p>
+					<h2>33°</h2>
+					<span><b>Setor 3</b></span>
+				</div>
+
+
+				<div class="temperatura1 alerta-alto">
+					<p>Kaline Barreira</p>
+					<h2>39°</h2>
+					<span><b>Setor 3</b></span>
+				</div>
+
+			</div>
+
+
+			<div style="display: none;" id="div_alerta_temperatura5">
+
+				<div class="temperatura1 alerta-baixo">
+					<p>Thiago Bonacelli</p>
+					<h2>34°</h2>
 					<span><b>Setor 2</b></span>
 				</div>
-			</a>
 
-			<a style="color: black;" href="tela3.html">
-				<div id="div_alerta_temperatura3" class="temperatura1">
-					<p name="nameleitura" id="idleitura" value="3">Rogerio Souza </p>
-					<h2 id="div_temperatura3">0°</h2>
+
+				<div class="temperatura1 alerta-baixo">
+					<p>Claudio Frizzarini</p>
+					<h2>34°</h2>
 					<span><b>Setor 2</b></span>
 				</div>
-			</a>
 
 
-			<a style="color: black;" href="tela4.html">
-				<div id="div_alerta_temperatura4" class="temperatura1">
-					<p name="nameleitura" id="idleitura" value="4"> Larissa Paula</p>
-					<h2 id="div_temperatura4">0°</h2>
+				<div class="temperatura1 alerta-baixo">
+					<p>Celia Taniwaki</p>
+					<h2>34°</h2>
+					<span><b>Setor 1</b></span>
+				</div>
+
+
+
+				<div class="temperatura1 alerta-baixo">
+					<p>Vivian Silva</p>
+					<h2>34°</h2>
+					<span><b>Setor 1</b></span>
+				</div>
+
+
+
+				<div class="temperatura1 alerta-alto">
+					<p>Giuliana Miniguit</p>
+					<h2>39°</h2>
+					<span><b>Setor 1</b></span>
+				</div>
+
+
+
+				<div class="temperatura1 alerta-alto">
+					<p>Gustavo Jesus</p>
+					<h2>39°</h2>
 					<span><b>Setor 2</b></span>
 				</div>
-			</a>
-
-
-			<div class="temperatura1 alerta-baixo">
-				<p>Natan Oliveira</p>
-				<h2>33°</h2>
-				<span><b>Setor 2</b></span>
 			</div>
 
 
-			<div class="temperatura1 alerta-baixo">
-				<p>Eduardo Verri</p>
-				<h2>34°</h2>
-				<span><b>Setor 2</b></span>
-			</div>
+			<div style="display: none;" id="div_alerta_temperatura6">
 
-			<div class="temperatura1 normal">
-				<p>Fabio da Silva</p>
-				<h2>36°</h2>
-				<span><b>Setor 1</b></span>
-			</div>
+				<div class="temperatura1 alerta-baixo">
+					<p>João Silva</p>
+					<h2>34°</h2>
+					<span><b>Setor 2</b></span>
+				</div>
 
 
-			<div class="temperatura1 normal">
-				<p>Julia Abraão</p>
-				<h2>37°</h2>
-				<span><b>Setor 1</b></span>
-			</div>
+				<div class="temperatura1 alerta-alto">
+					<p>Claudia Santos</p>
+					<h2>39°</h2>
+					<span><b>Setor 2</b></span>
+				</div>
 
 
-			<div class="temperatura1 alerta-alto">
-				<p>Cida Moura</p>
-				<h2>39°</h2>
-				<span><b>Setor 3</b></span>
-			</div>
+				<div class="temperatura1 alerta-baixo">
+					<p>Tania Costa</p>
+					<h2>35°</h2>
+					<span><b>Setor 1</b></span>
+				</div>
 
 
 
-			<div class="temperatura1 alerta-baixo">
-				<p>Kevin Santos</p>
-				<h2>33°</h2>
-				<span><b>Setor 3</b></span>
-			</div>
-
-
-			<div class="temperatura1 alerta-alto">
-				<p>Bianca Costa</p>
-				<h2>39°</h2>
-				<span><b>Setor 3</b></span>
-			</div>
-
-
-			<div class="temperatura1 normal">
-				<p>Vinicius Carvalho</p>
-				<h2>36°</h2>
-				<span><b>Setor 3</b></span>
-			</div>
-
-
-			<div class="temperatura1 alerta-baixo">
-				<p>Martin Santana</p>
-				<h2>33°</h2>
-				<span><b>Setor 3</b></span>
-			</div>
-
-
-			<div class="temperatura1 alerta-alto">
-				<p>Kaline Barreira</p>
-				<h2>39°</h2>
-				<span><b>Setor 3</b></span>
-			</div>
-
-		</div>
-
-
-		<div style="display: none;" id="div_alerta_temperatura5">
-
-			<div class="temperatura1 alerta-baixo">
-				<p>Thiago Bonacelli</p>
-				<h2>34°</h2>
-				<span><b>Setor 2</b></span>
-			</div>
-
-
-			<div class="temperatura1 alerta-baixo">
-				<p>Claudio Frizzarini</p>
-				<h2>34°</h2>
-				<span><b>Setor 2</b></span>
-			</div>
-
-
-			<div class="temperatura1 alerta-baixo">
-				<p>Celia Taniwaki</p>
-				<h2>34°</h2>
-				<span><b>Setor 1</b></span>
-			</div>
+				<div class="temperatura1 alerta-baixo">
+					<p>Maria Julia</p>
+					<h2>34°</h2>
+					<span><b>Setor 1</b></span>
+				</div>
 
 
 
-			<div class="temperatura1 alerta-baixo">
-				<p>Vivian Silva</p>
-				<h2>34°</h2>
-				<span><b>Setor 1</b></span>
-			</div>
+				<div class="temperatura1 alerta-alto">
+					<p>Julia Ribeiro</p>
+					<h2>39°</h2>
+					<span><b>Setor 1</b></span>
+				</div>
 
 
 
-			<div class="temperatura1 alerta-alto">
-				<p>Giuliana Miniguit</p>
-				<h2>39°</h2>
-				<span><b>Setor 1</b></span>
-			</div>
-
-
-
-			<div class="temperatura1 alerta-alto">
-				<p>Gustavo Jesus</p>
-				<h2>39°</h2>
-				<span><b>Setor 2</b></span>
-			</div>
-		</div>
-
-
-		<div style="display: none;" id="div_alerta_temperatura6">
-
-			<div class="temperatura1 alerta-baixo">
-				<p>João Silva</p>
-				<h2>34°</h2>
-				<span><b>Setor 2</b></span>
-			</div>
-
-
-			<div class="temperatura1 alerta-alto">
-				<p>Claudia Santos</p>
-				<h2>39°</h2>
-				<span><b>Setor 2</b></span>
-			</div>
-
-
-			<div class="temperatura1 alerta-baixo">
-				<p>Tania Costa</p>
-				<h2>35°</h2>
-				<span><b>Setor 1</b></span>
-			</div>
-
-
-
-			<div class="temperatura1 alerta-baixo">
-				<p>Maria Julia</p>
-				<h2>34°</h2>
-				<span><b>Setor 1</b></span>
-			</div>
-
-
-
-			<div class="temperatura1 alerta-alto">
-				<p>Julia Ribeiro</p>
-				<h2>39°</h2>
-				<span><b>Setor 1</b></span>
-			</div>
-
-
-
-			<div class="temperatura1 alerta-alto">
-				<p>Guilherme Oliveira</p>
-				<h2>39°</h2>
-				<span><b>Setor 2</b></span>
+				<div class="temperatura1 alerta-alto">
+					<p>Guilherme Oliveira</p>
+					<h2>39°</h2>
+					<span><b>Setor 2</b></span>
+				</div>
 			</div>
 		</div>
 	</div>
-
 
 	<!--footer-->
 	<div class="footer" id="contato">
@@ -272,6 +274,7 @@
 
 	// função da select dos setores
 	function setores() {
+
 		if (setoresGerais.value == 'setor1') {
 			titulo2.style.display = 'block';
 			div_alertas_criticos.style.display = 'none';
@@ -281,9 +284,17 @@
 			div_alerta_temperatura6.style.display = 'none';
 			titulo3.style.display = 'none';
 			todosSetores.style.display = 'block';
+			op_setor2.style.display = 'block';
 
+		} else if (setoresGerais.value == '') {
+			geral.style.display = 'none';
+			titulo1.style.display = 'none';
+			titulo2.style.display = 'none';
+			titulo3.style.display = 'none';
+			alert ('Favor selecione um setor')
+		}
+		else if (setoresGerais.value == 'allsectors') {
 
-		} else if (setoresGerais.value == 'allsectors') {
 			div_alertas_criticos.style.display = 'block';
 			titulo1.style.display = 'block';
 			titulo2.style.display = 'none';
@@ -291,6 +302,9 @@
 			div_alerta_temperatura6.style.display = 'none';
 			div_alerta_temperatura5.style.display = 'none';
 			todosSetores.style.display = 'none';
+			op_setor2.style.display = 'block';
+			
+
 
 		} else if (setoresGerais.value == 'setor2') {
 
@@ -301,6 +315,7 @@
 			div_alerta_temperatura6.style.display = 'block';
 			div_alertas_criticos.style.display = 'none';
 			todosSetores.style.display = 'block';
+			op_setor2.style.display = 'none';
 
 		}
 	}
