@@ -5,77 +5,52 @@
 
 .fundo {
    /* background-color: #2EC4B6;*/
-    background-image: url(img/Fundo_perfil_dash.jpg);
+    /* background-image: url(img/Fundo_perfil_dash.jpg); */
     background-size: cover;
     height: 900px;
 }
+/*Header*/
+.header {
+    background-color: #fff;
+}
 
-img {
+.header img {
+    width: 350px;
+    background-size: cover;
+    padding: 20px 0 0 30px;
+    
+}
+.img_funcionario {
     height: 250px;
-    border-color: rgb(12, 102, 102);
+    border-color: #2ec4b6;
     border-style: solid;
     margin: 50px 50px 20px 50px;
     border-radius: 10px;
 }
-
-.perfil {
-    background-color: rgb(214, 233, 235);
-    width: 450px;
-    height: 500px;
-    float: left;
-    text-align: center;
-    margin: 0px 100px 100px 100px;
-    border-radius: 50px;
-    font-size: 18px;
-    border-color: rgb(0, 0, 0);
-    border-style: solid;
+.nav {
+    float:right;
+    margin-right: 50px; 
+    padding-top: 30px; 
 }
 
-button {
-    margin: 20px;
-    height: 30px;
-    width: 200px;
-    font-size: 18px;
-    background-color: white;
-    color: rgb(12, 102, 102);
-    transition: 0.3s;
-    cursor: pointer;
-    border-radius: 10px;
-    border-color: rgb(12, 102, 102);
-    border-style: solid;
+.nav li {
+    display: inline-block;
+    padding: 40px 30px 0 20px;
+    font-size: 30px;
 }
 
-button:hover{
-background-color: rgb(12, 102, 102);
-color: white;
-border-color: rgb(255, 255, 255);
-}
-
-p {
-    text-align: justify;
-    margin: 0 0 0 100px;
-}
-
-#voltar {
-    margin: 50px;
-    height: 30px;
-    width: 100px;
-    font-size: 18px;
-    background-color: white;
-    color: rgb(12, 102, 102);
-    transition: 0.3s;
-    cursor: pointer;
-    border-radius: 10px; 
-    border-color: rgb(12, 102, 102);
-    border-style: solid;
+ .nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 28px;
 
 }
 
-#voltar:hover{
-    background-color: rgb(12, 102, 102);
-    color: white;
-    border-color: rgb(255, 255, 255);
+ .nav img {
+    width: 45px;
+    padding-left:50px;
 }
+
 
 .dashboard{
     float: right;
