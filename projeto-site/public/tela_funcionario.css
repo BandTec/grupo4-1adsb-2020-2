@@ -2,10 +2,14 @@
     margin: 0;
     padding: 0;
 }
+
 .fundo {
-    background-color: rgb(23, 124, 124);
-    height: 1000px;
+   /* background-color: #2EC4B6;*/
+    background-image: url(img/Fundo_perfil_dash.jpg);
+    background-size: cover;
+    height: 753px;
 }
+
 img {
     height: 250px;
     border-color: rgb(12, 102, 102);
@@ -13,6 +17,7 @@ img {
     margin: 50px 50px 20px 50px;
     border-radius: 10px;
 }
+
 .perfil {
     background-color: rgb(214, 233, 235);
     width: 450px;
@@ -25,6 +30,7 @@ img {
     border-color: rgb(0, 0, 0);
     border-style: solid;
 }
+
 button {
     margin: 20px;
     height: 30px;
@@ -38,16 +44,18 @@ button {
     border-color: rgb(12, 102, 102);
     border-style: solid;
 }
+
 button:hover{
 background-color: rgb(12, 102, 102);
 color: white;
 border-color: rgb(255, 255, 255);
-
 }
+
 p {
     text-align: justify;
     margin: 0 0 0 100px;
 }
+
 #voltar {
     margin: 50px;
     height: 30px;
@@ -62,8 +70,17 @@ p {
     border-style: solid;
 
 }
+
 #voltar:hover{
     background-color: rgb(12, 102, 102);
     color: white;
     border-color: rgb(255, 255, 255);
-    }
+}
+
+.dashboard{
+    float: right;
+    border-radius: 45px;
+    border: 3px solid black;
+    background-color: white;
+    margin-right: 300px;
+}

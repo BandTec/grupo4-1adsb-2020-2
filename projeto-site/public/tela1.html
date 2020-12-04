@@ -5,7 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto IoT - Gráficos</title>
+    <link rel="shortcut icon" href="img/esculápio.png">
+    <title>Health Analytics - Gráficos</title>
    <!-- script do google charts -->
    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
    <script type="text/javascript" src="funcoes.js"></script>
@@ -22,53 +23,55 @@
         /* Classes CSS para exemplos de alertas */
 
         .normal {
-            background-color: white;
+            background-color: green;
         }
 
         .alerta-alto {
-            background-color: tomato;
+            background-color: red;
+            
         }
 
         .alerta-baixo {
-            background-color: aquamarine;
+            background-color: rgb(36, 193, 214);
+            
         }
     </style>
 </head>
-
 <body>
-    <h3>Olá, <b id="b_usuario"></b></h3>
-    <div class="fundo">
-    <a href="dashboard_chart.html"><button id="voltar">voltar</button></a><br>
-    <div class="perfil">
-        <img src="img/brandao.jfif">
-        <p><b>Funcionário:</b> Brandão.</p>
-        <p><b>Setor:</b> 1.</p>
-        <p><b>Tipo Sanguíneo:</b> O-</p>
-        <p><b>Data de nascimento:</b> 00/00/0000</p>
-        <button class="btn">Temperatura</button>
-    </div>
 
-    </div>
+<div class="fundo">
+    <a href="dashboard_chart.html"><button id="voltar">voltar</button></a><br>
+        <div class="perfil">
+            <img src="img/Pessoa1.jpg">
+            <p><b>Funcionário:</b> Marcos Santos</p>
+            <p><b>Setor:</b> 1</p>
+            <p><b>Tipo Sanguíneo:</b> O-</p>
+            <p><b>Data de nascimento:</b> 12/08/1993</p>
+            <button class="btn" onclick="chamargraficos(1)">Temperatura</button>
+        </div>
+    
 
     <div class="dashboard">
-        <button class="btn" onclick="chamargraficos(1)">Usuario 1</button>
-        <button class="btn" onclick="chamargraficos(2)">Usuario 2</button>
-        <button class="btn" onclick="chamargraficos(3)">Usuario 3</button>
-        <button class="btn" onclick="chamargraficos(4)">Usuario 4</button>
         <div style="width:75%; margin: auto">
             <div id="div_aguarde">Dados sendo obtidos...</div>
             <canvas id="canvas_grafico"></canvas>
         </div>
     </div>
-
+</div>
 </body>
 
 </html>
 
 <script>
+<<<<<<< HEAD
+  //   let usuario;
+    
+  //  verificar_autenticacao();
+=======
     //  let usuario;
     
     // verificar_autenticacao();
+>>>>>>> 94d57b06149bfe46a63bb50cf8ee046cc4e1c7fa
 
     let proximaAtualizacao;
 
