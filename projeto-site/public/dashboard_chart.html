@@ -36,7 +36,7 @@
 		<a href="index.html"><img src="img/logo_home_color_dark.png" alt=""></a>
 		<h2 id="titulo1" style="text-align: center; margin-bottom: 100px; font-size: 40pt;">Todos os alertas críticos:</h2>
 		<h2 id="titulo2" style="text-align: center; display: none; margin-bottom: 100px; font-size: 40pt;">Setor 1:</h2>
-
+		<h2 id="titulo3" style="text-align: center; display: none; margin-bottom: 100px; font-size: 40pt;">Setor 2:</h2>
 		
 		<h3 style="font-size: 29pt;">OLÁ <b id="b_usuario"></b>:
 			<select id="setoresGerais" onchange="setores()" style="width: 260px; font-size:20pt;">
@@ -200,6 +200,57 @@
 				<span><b>Setor 2</b></span>
 			</div> 
 		</div>
+
+
+		<div style="display: none;" id="div_alerta_temperatura6">
+
+			<div class="temperatura1 alerta-baixo">
+				<p>João Ribeiro</p>
+				<h2>35°</h2>
+				<span><b>Setor 2</b></span>
+			</div>
+
+			
+			<div class="temperatura1 alerta-baixo">
+					<p>Roberta Miranda</p>
+					<h2>34°</h2>
+				<span><b>Setor 2</b></span>
+			</div>
+
+
+			<div class="temperatura1 alerta-alto">
+				<p>Tania Silveira</p>
+				<h2>38°</h2>
+				<span><b>Setor 1</b></span>
+			</div>
+
+
+
+			<div class="temperatura1 alerta-baixo">
+				<p>Rafaela Costa</p>
+				<h2>34°</h2>
+				<span><b>Setor 1</b></span>
+			</div>
+		
+
+
+		 	<div class="temperatura1 alerta-alto">
+				<p>Gabriel Silva</p>
+				<h2>39°</h2>
+				<span><b>Setor 1</b></span>
+			</div>
+
+
+
+			<div class="temperatura1 alerta-alto">
+				<p>Guilherme santos</p>
+				<h2>39°</h2>
+				<span><b>Setor 2</b></span>
+			</div> 
+		</div>
+
+
+
 	</div> 
 
 	<!--footer-->
@@ -225,15 +276,27 @@
 			div_alertas_criticos.style.display = 'none';
 			titulo1.style.display = 'none';
 			div_alerta_temperatura5.style.display = 'block';
+			div_alerta_temperatura6.style.display = 'none';
+			div_alerta_temperatura6.style.display = 'none';
+			titulo3.style.display = 'none';
 
 			
 		} else if(setoresGerais.value == 'allsectors'){
 			div_alertas_criticos.style.display = 'block';
 			titulo1.style.display = 'block';
+			titulo2.style.display = 'none';
+			titulo3.style.display = 'none';
+			div_alerta_temperatura6.style.display = 'none';
 			div_alerta_temperatura5.style.display = 'none';
 
 
 		} else if(setoresGerais.value == 'setor2'){
+			titulo3.style.display = 'block';
+			titulo2.style.display = 'none';
+			titulo1.style.display = 'none';
+			div_alerta_temperatura5.style.display = 'none';
+			div_alerta_temperatura6.style.display = 'block';
+			div_alertas_criticos.style.display = 'none';
 
 		}
 	}
