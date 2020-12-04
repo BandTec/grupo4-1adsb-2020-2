@@ -1,2 +1,3 @@
 [1202/125709.068:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
 [1202/142032.822:ERROR:process_info.cc(359)] UncheckedAllocate
+[1204/144015.023:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
