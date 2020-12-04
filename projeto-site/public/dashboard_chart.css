@@ -27,6 +27,7 @@ body {
     margin-top: 335px;
     margin-right: 194px;
 }
+
 #btnAPI{
     display: none;
     float: right;
@@ -46,25 +47,16 @@ body {
 /*Header*/
 .header {
     background-color: #fff;
-    min-height: 100px;
-
 }
 
- .header2{
-    background-color:rgba(221, 255, 253, 0.767);
-    height: 140px;
-    margin-bottom: 100px;
-
- }
- 
- .header img {
+.header img {
     width: 350px;
     background-size: cover;
     padding: 20px 0 0 30px;
     
- }
+}
 
- /*nav*/
+/*nav*/
 
 .nav {
     float:right;
@@ -191,8 +183,8 @@ h3 {
     margin-top: 40px;
 }
 
- /*footer*/
- .footer img {
+/*footer*/
+.footer img {
     width: 40px;
 }
 
@@ -204,8 +196,8 @@ h3 {
 }
 
 .footer ul {
-    float: right;
-    margin-right: 40%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .footer {
