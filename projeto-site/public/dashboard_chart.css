@@ -46,7 +46,8 @@ body {
 
 /*Header*/
 .header {
-    background-color: #fff;
+  
+    height: 400px;
 }
 
 .header img {
@@ -81,6 +82,8 @@ body {
     width: 45px;
     padding-left:50px;
 }
+
+
 
 
  #titulo_medicoes{
@@ -206,7 +209,7 @@ h3 {
 .footer {
     background-color: turquoise;
     height: 100px;
-    margin-top: 80px;
+    margin-top: 120px;
 }
 
 /*fim do footer*/
