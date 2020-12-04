@@ -50,7 +50,7 @@
                 </div>
                 <div class="form-group">
                     <label for=""> Nome da empresa:</label>
-                    <input onkeyup="validadorNomeEmpresa()" id="EmpNome" name="nomeEmpresa" type="text" class="form-input" required placeholder="Ex: E-corp">
+                    <input onkeyup="validadorNomeEmpresa()" id="EmpNome" name="nome" type="text" class="form-input" required placeholder="Ex: E-corp">
                 </div>
                 <div class="form-group">
                     <label for=""> Telefone:</label>
@@ -195,7 +195,7 @@
     //]]>
 
     function cadastrar() {
-        aguardar();
+        // aguardar();
         var formulario = new URLSearchParams(new FormData(form_cadastro));
         fetch("/usuarios/cadastrar", {
             method: "POST",
