@@ -83,13 +83,13 @@ db.conectar()
     .then(() => {
         const sql = `
         INSERT into dbo.leitura (temperatura, momento, idleitura)
-        values (${temperature+10}, '${agora()}', 1);
+        values (${temperature+3}, '${agora()}', 1);
         INSERT into dbo.leitura (temperatura, momento, idleitura)
-        values (${temperature-10}, '${agora()}', 2);
+        values (${temperature-2}, '${agora()}', 2);
         INSERT into dbo.leitura (temperatura, momento, idleitura)
         values (${temperature+5},'${agora()}', 3);
         INSERT into dbo.leitura (temperatura, momento, idleitura)
-        values (${temperature-5},'${agora()}', 4);`;
+        values (${temperature-3.5},'${agora()}', 4);`;
         console.log(sql);
     return db.sql.query(sql).then(()=>{
         console.log("Registro inserido com sucesso! \n");

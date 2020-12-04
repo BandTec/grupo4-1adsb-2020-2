@@ -14,16 +14,16 @@
         /* Classes CSS para exemplos de alertas */
 
         .normal {
-            background-color: white;
+            background-color: green;
         }
 
         .alerta-alto {
-            color: tomato;
+            background-color: red;
             
         }
 
         .alerta-baixo {
-            color: rgb(38, 0, 255);
+            background-color: rgb(36, 193, 214);
             
         }
     </style>
@@ -38,41 +38,41 @@
 
 			<h3>OLÁ <b id="b_usuario"></b></h3>
 
-		<a href="tela1.html">
-			<div  class="temperatura1">
+		
+			<div id="div_alerta_temperatura"  class="temperatura1">
 				<p name="nameleitura" id="idleitura" value="1">1</p>
-				<h2 id="div_temperatura">37.9º</h2>
+				<h2 id="div_temperatura">0º</h2>
 				<span><b>Setor 1</b></span>
 			</div>
-		</a>
-		<div class="alerta" id="div_alerta_temperatura"> </div>
+	
+		
 
 
-		<div class="temperatura1">
+		<div id="div_alerta_temperatura2" class="temperatura1">
 			<p name="nameleitura" id="idleitura" value="2">2</p>
-			<h2 id="div_temperatura2">39°</h2>
+			<h2 id="div_temperatura2">0°</h2>
 			<span><b>Setor 2</b></span>
 		</div>
-		<div class="alerta" id="div_alerta_temperatura2"> </div>
+		
 
 
-		<div class="temperatura1">
+		<div id="div_alerta_temperatura3" class="temperatura1">
 			<p name="nameleitura" id="idleitura" value="3">3</p>
-			<h2 id="div_temperatura3">39°</h2>
+			<h2 id="div_temperatura3">0°</h2>
 			<span><b>Setor 2</b></span>
 		</div>
-		<div class="alerta" id="div_alerta_temperatura3"> </div>
+		
 
 
 
-		<div class="temperatura2">
+		<div id="div_alerta_temperatura4" class="temperatura1">
 			<p name="nameleitura" id="idleitura" value="4">4</p>
-			<h2 id="div_temperatura4">34°</h2>
+			<h2 id="div_temperatura4">0°</h2>
 			<span><b>Setor 2</b></span>
 		</div>
-		<div class="alerta" id="div_alerta_temperatura4"> </div>
+		
 
-		<!--
+	
 		<div class="temperatura2">
 			<p>Natan Oliveira</p>
 			<h2>34°</h2>
@@ -192,7 +192,7 @@
 			<span><b>Setor 2</b></span>
 		</div>
 	</div>
-	-->
+	
 
 
 	<!--footer-->
@@ -279,23 +279,27 @@
 	function alertar(temperatura, idleitura) {
 		// padrão para meu alerta
 		var limites = {
-			max_temperatura: 40,
-			min_temperatura: 20
+			max_temperatura: 37.8,
+			min_temperatura: 35.5
 		};
 
 		// zerar aviso de mensagem
-		var mensagem_temperatura = '';
-		var classe_temperatura = 'alerta';
+		
+		var classe_temperatura = 'temperatura1';
 
 		// comparando
 		if (temperatura > limites.max_temperatura) {
-			mensagem_temperatura += 'Temperatura alta demais! <br>';
-			classe_temperatura = 'alerta alerta-alto';
+		
+			classe_temperatura = 'temperatura1 alerta-alto';
 		}
 
 		if (temperatura < limites.min_temperatura) {
-			mensagem_temperatura = 'Temperatura baixa demais! <br>';
-			classe_temperatura = 'alerta alerta-baixo';
+			
+			classe_temperatura = 'temperatura1 alerta-baixo';
+		}
+
+		if(temperatura >= limites.min_temperatura && temperatura <= limites.max_temperatura){
+			classe_temperatura = 'temperatura1 normal';
 		}
 
 
@@ -317,7 +321,7 @@
 		}
 
 		// alterando
-		div_temperatura_alterar.innerHTML = mensagem_temperatura;
+		
 		div_temperatura_alterar.className = classe_temperatura;
 	}
 

@@ -103,18 +103,7 @@ body {
  .analytics{
      margin-left:200px;
  }
- #alta{
-     background-color: #F0803C;
-     font-size: 30px;
-     width: 70px;
 
- }
-
- #baixa{
-     background-color: #225560;
-     font-size: 30px;
-     width: 90px;
- }
 
  .bloco_temperatura{
      text-align: center;
@@ -125,7 +114,7 @@ body {
  }
 
  .temperatura1{
-    background-color: #F0803C;
+     background-color: white;
     height: 200px;
     width: 233px;
     border-radius: 7px;
@@ -150,7 +139,6 @@ padding-top: 15px;
 
 
 .temperatura2{
-    background-color: #225560;
     height: 200px;
     width: 233px;
     border-radius: 7px;
