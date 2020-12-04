@@ -34,7 +34,7 @@
 
 	<div class="header">
 		<a href="index.html"><img src="img/logo_home_color_dark.png" alt=""></a>
-		<h2 style="text-align: center; margin-bottom: 100px; font-size: 40pt;">Todos os alertas críticos:</h2>
+		<h2 id="titulo1" style="text-align: center; margin-bottom: 100px; font-size: 40pt;">Todos os alertas críticos:</h2>
 
 		
 		<h3 style="font-size: 29pt;">OLÁ <b id="b_usuario"></b>:<select id="setoresGerais" onchange="setores()" style="width: 260px; font-size:20pt;">
@@ -44,9 +44,9 @@
 			<option value="setor2">Setor 2</option>
 		</select></h3>
 		
-		
-		<div id="temperatura-criticas" style="display: none;"></div>
-		<a href="tela1.html">
+		<div id="div_alertas_criticos">
+			<div id="temperatura-criticas" style="display: none;"></div>
+			<a href="tela1.html">
 			<div id="div_alerta_temperatura"  class="temperatura1">
 				<p name="nameleitura" id="idleitura" value="1">1</p>
 				<h2 id="div_temperatura">0º</h2>
@@ -153,6 +153,8 @@
 			</div>
 		</a>
 
+		</div>
+		
 
 		
 		<div style="display: none;" id="div_alerta_temperatura5" class="temperatura1">
@@ -220,10 +222,8 @@
 	// função da select dos setores
 	function setores(){
 		if(setoresGerais.value == 'setor1'){
-			div_alerta_temperatura.style.display = 'none';
-			div_alerta_temperatura2.style.display = 'none';
-			div_alerta_temperatura3.style.display = 'none';
-			div_alerta_temperatura4.style.display = 'none';
+			div_alertas_criticas.style.display = 'none'
+			titulo1.style.display = 'none';
 			div_alerta_temperatura5.style.display = 'block';
 		}
 	}
