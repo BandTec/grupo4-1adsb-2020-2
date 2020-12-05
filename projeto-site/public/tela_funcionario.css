@@ -111,12 +111,17 @@ body {
     background-color: #00548b;
     cursor: pointer;
     color: white;
+ 
 }
 
 .btn-historico{
     width: 270px;
     margin-bottom: 20px;
     margin-top: 20px;
+    border-radius: 4px;
+}
+.btn-historico:hover{
+    background-color:#0c7494 ;
 }
 
 .dashboard {
