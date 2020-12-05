@@ -62,14 +62,13 @@
             <p><b>Tipo sanguíneo:</b> AB+</p>
             <p><b>Data nascimento</b>: 19/04/2000</p>
         </div>
-            <button class="btn btn-historico" onclick="chamargraficos(1)">Histórico de temperatura</button>
+            <button class="btn btn-historico" onclick="chamargraficos(1), plotarGrafico()">Histórico de temperatura</button>
         </div>
-
 
 
         <div class="dashboard">
             <div id="div_aguarde">Dados sendo obtidos...</div>
-            <canvas id="canvas_grafico"></canvas>
+            <canvas style="display:none" id="canvas_grafico"></canvas>
         </div>
 
         	<!--footer-->
@@ -83,6 +82,8 @@
 </html>
 
 <script>
+
+    
     //   let usuario;
 
     //  verificar_autenticacao();

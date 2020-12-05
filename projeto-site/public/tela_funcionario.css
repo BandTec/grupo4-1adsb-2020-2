@@ -24,6 +24,7 @@ body {
 .header img {
     width: 350px;
     background-size: cover;
+    padding: 25px;
 
 
 }
@@ -126,13 +127,13 @@ body {
 
 .dashboard {
     width: 1200px;
-    height: 500px;
+    height: 700px;
     border-radius: 5px;
     border: 4px solid #21c7c7de;
     background-color: white;
     text-align: center;
     position: relative;
-    bottom: 550px;
+    bottom: 700px;
     left: 600px;
 }
 
