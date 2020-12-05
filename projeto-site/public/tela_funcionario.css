@@ -24,6 +24,7 @@ body {
 .header img {
     width: 350px;
     background-size: cover;
+    padding: 25px;
 
 
 }
@@ -112,23 +113,34 @@ body {
     background-color: #00548b;
     cursor: pointer;
     color: white;
+ 
 }
 
 .btn-historico{
     width: 270px;
     margin-bottom: 20px;
     margin-top: 20px;
+    border-radius: 4px;
+}
+.btn-historico:hover{
+    background-color:#0c7494 ;
 }
 
 .dashboard {
     width: 1200px;
-    height: 500px;
+    height: 700px;
     border-radius: 5px;
     border: 4px solid #21c7c7de;
     background-color: white;
     text-align: center;
+<<<<<<< HEAD
     margin-left: 600px;
     margin-bottom: 200px;
+=======
+    position: relative;
+    bottom: 700px;
+    left: 600px;
+>>>>>>> 87c837a245eb20a91c995bddec3ff04b7d6ce9fb
 }
 
 #div_aguarde {
