@@ -57,10 +57,11 @@
         <p id="nomeTitulo"><b>Marcos Santos</b></p>
         <img style="  border :#1a8686 solid 5px;" src="img/perfil1.png">
         <div class="dados">
-        <p><b>Setor:</b> 1</p>
-        <p><b>Tipo sanguíneo:</b> AB+</p>
-        <p><b>Data nascimento</b>: 19/04/2000</p>
-
+            <p><b>Setor:</b> 1</p>
+            <p><b>Tipo sanguíneo:</b> AB+</p>
+            <p><b>Data nascimento</b>: 19/04/2000</p>
+        </div>
+    </div>
 
 
     <div class="dashboard">
@@ -124,12 +125,6 @@
                     display: true,
                     position: 'left',
                     id: 'y-temperatura',
-                }, {
-
-                    // grid line settings
-                    gridLines: {
-                        drawOnChartArea: false, // only want the grid lines for one axis to show up
-                    },
                 }],
             }
         };
@@ -158,8 +153,8 @@
                             datasets: [{
                                 yAxisID: 'y-temperatura',
                                 label: 'Temperatura',
-                                borderColor: window.chartColors.red,
-                                backgroundColor: window.chartColors.red,
+                                borderColor: window.chartColors.blue,
+                                backgroundColor: window.chartColors.blue,
                                 fill: false,
                                 data: []
                             }]
