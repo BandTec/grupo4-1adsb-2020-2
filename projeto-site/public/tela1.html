@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/esculápio.png">
     <title>Health Analytics - Gráficos</title>
-   <!-- script do google charts -->
-   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-   <script type="text/javascript" src="funcoes.js"></script>
+    <!-- script do google charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="funcoes.js"></script>
 
-   <!-- scripts do Chart.js -->
-   <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
-   <script type="text/javascript" src="https://www.chartjs.org/samples/latest/utils.js"></script>
-   <script type="text/javascript" src="funcoes.js"></script>
+    <!-- scripts do Chart.js -->
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+    <script type="text/javascript" src="https://www.chartjs.org/samples/latest/utils.js"></script>
+    <script type="text/javascript" src="funcoes.js"></script>
 
 
     <link rel="stylesheet" href="tela_funcionario.css">
-   
+
     <style>
         /* Classes CSS para exemplos de alertas */
 
@@ -28,52 +27,56 @@
 
         .alerta-alto {
             background-color: red;
-            
+
         }
 
         .alerta-baixo {
             background-color: rgb(36, 193, 214);
-            
+
         }
     </style>
 </head>
-<body>
-     <!--HEADER-->
 
-     <div class="header">
+<body>
+    <!--HEADER-->
+
+    <div class="header">
         <a href="index.html"><img src="img/logo_home_color_dark.png" alt=""></a>
 
 
         <div class="nav">
             <ul>
-                <li><a  href="dashboard_chart.html"> <button class="btn_voltar">VOLTAR</button> </a></li>
-                <button class="btn" onclick="chamargraficos(1)">HISTÓRICO DE TEMP</button>
+                <li><a href="dashboard_chart.html"> <button class="btn_voltar">VOLTAR</button> </a></li>
+              
             </ul>
+        </div>
+
         </div>
         <!--Fim do Header-->
 
+        <div class="perfil">
+            <p id="nomeTitulo"><b>Marcos Santos</b></p>
+            <img style="  border :#1a8686 solid 5px;" src="img/perfil1.png">
+            <div class="dados">
+            <p><b>Setor:</b> 1</p>
+            <p><b>Tipo sanguíneo:</b> AB+</p>
+            <p><b>Data nascimento</b>: 19/04/2000</p>
+        </div>
+            <button class="btn btn-historico" onclick="chamargraficos(1)">Histórico de temperatura</button>
+        </div>
 
-   
 
-    <div class="perfil">
-        <img style="  border :#1a8686 solid 5px;" src="img/pessoa1.2.jpg">
-        <p><b>Funcionário:</b> Marcos Santos</p>
-    </div>
 
-    <div class="dados_perfil">
-        <p><b>Setor:</b> 1</p>
-        <p><b>Tipo Sanguíneo:</b> O-</p>
-        <p><b>Data de nascimento:</b> 12/08/1993</p>
-    </div>
-
-    
-
-    <div class="dashboard">
-        <div style="width:700px; margin: 0px">
+        <div class="dashboard">
             <div id="div_aguarde">Dados sendo obtidos...</div>
             <canvas id="canvas_grafico"></canvas>
         </div>
-    </div>
+
+        	<!--footer-->
+	<div class="footer" >
+		
+	</div>
+	<!--footer finish-->
 
 </body>
 
@@ -81,7 +84,7 @@
 
 <script>
     //   let usuario;
-      
+
     //  verificar_autenticacao();
 
     let proximaAtualizacao;
@@ -96,7 +99,7 @@
 
     }
 
-   
+
 
     // neste JSON tem que ser 'labels', 'datasets' etc, 
     // porque é o padrão do Chart.js
@@ -108,7 +111,9 @@
     function configurarGrafico() {
         var configuracoes = {
             responsive: true,
-            animation: { duration: 500 },
+            animation: {
+                duration: 500
+            },
             hoverMode: 'index',
             stacked: false,
             title: {
@@ -122,7 +127,7 @@
                     position: 'left',
                     id: 'y-temperatura',
                 }, {
-                   
+
                     // grid line settings
                     gridLines: {
                         drawOnChartArea: false, // only want the grid lines for one axis to show up
@@ -138,43 +143,43 @@
     // e como são recuperados do BackEnd
     function obterDadosGraficoPrimeiraVez(idleitura) {
 
-        if (proximaAtualizacao!=undefined) {
+        if (proximaAtualizacao != undefined) {
             clearTimeout(proximaAtualizacao);
         }
 
-        fetch(`/leituras/ultimas/${idleitura}`, { cache: 'no-store' }).then(function (response) {
-            if (response.ok) {
-                response.json().then(function (resposta) {
-                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                    resposta.reverse();
+        fetch(`/leituras/ultimas/${idleitura}`, {
+                cache: 'no-store'
+            }).then(function (response) {
+                if (response.ok) {
+                    response.json().then(function (resposta) {
+                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                        resposta.reverse();
 
-                    var dados = {
-                        labels: [],
-                        datasets: [
-                            {
+                        var dados = {
+                            labels: [],
+                            datasets: [{
                                 yAxisID: 'y-temperatura',
                                 label: 'Temperatura',
                                 borderColor: window.chartColors.red,
                                 backgroundColor: window.chartColors.red,
                                 fill: false,
                                 data: []
-                            }
-                        ]
-                    };
-                    for (i = 0; i < resposta.length; i++) {
-                        var registro = resposta[i];
-                        dados.labels.push(registro.momento_grafico);
-                        dados.datasets[0].data.push(registro.temperatura);
+                            }]
+                        };
+                        for (i = 0; i < resposta.length; i++) {
+                            var registro = resposta[i];
+                            dados.labels.push(registro.momento_grafico);
+                            dados.datasets[0].data.push(registro.temperatura);
 
-                    }
-                    console.log(JSON.stringify(dados));
-                    div_aguarde.style.display = 'none';
-                    plotarGrafico(dados, idleitura);
-                });
-            } else {
-                console.error('Nenhum dado encontrado ou erro na API');
-            }
-        })
+                        }
+                        console.log(JSON.stringify(dados));
+                        div_aguarde.style.display = 'none';
+                        plotarGrafico(dados, idleitura);
+                    });
+                } else {
+                    console.error('Nenhum dado encontrado ou erro na API');
+                }
+            })
             .catch(function (error) {
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
@@ -187,34 +192,37 @@
     // ou se souber o que está fazendo!
     function atualizarGrafico(idleitura, dados) {
 
-        fetch(`/leituras/tempo-real/${idleitura}`, { cache: 'no-store' }).then(function (response) {
-            console.log("Estou tentando pegar idleitura = ", idleitura)
-            if (response.ok) {
-                response.json().then(function (novoRegistro) {
+        fetch(`/leituras/tempo-real/${idleitura}`, {
+                cache: 'no-store'
+            }).then(function (response) {
+                console.log("Estou tentando pegar idleitura = ", idleitura)
+                if (response.ok) {
+                    response.json().then(function (novoRegistro) {
 
-                    console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
-                    console.log(`Dados atuais do gráfico: ${dados}`);
+                        console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
+                        console.log(`Dados atuais do gráfico: ${dados}`);
 
-                    // tirando e colocando valores no gráfico
-                    dados.labels.shift(); // apagar o primeiro
-                    dados.labels.push(novoRegistro.momento_grafico); // incluir um novo momento
-                    dados.datasets[0].data.shift();  // apagar o primeiro de temperatura
-                    
-                    dados.datasets[0].data.push(novoRegistro.temperatura); // incluir uma nova leitura de temperatura
-                   
+                        // tirando e colocando valores no gráfico
+                        dados.labels.shift(); // apagar o primeiro
+                        dados.labels.push(novoRegistro.momento_grafico); // incluir um novo momento
+                        dados.datasets[0].data.shift(); // apagar o primeiro de temperatura
 
-                    console.log("meu usuario é o " + idleitura)
-
-                    window.grafico_linha.update();
+                        dados.datasets[0].data.push(novoRegistro
+                            .temperatura); // incluir uma nova leitura de temperatura
 
 
+                        console.log("meu usuario é o " + idleitura)
+
+                        window.grafico_linha.update();
+
+
+                        proximaAtualizacao = setTimeout(() => atualizarGrafico(idleitura, dados), 5000);
+                    });
+                } else {
+                    console.error('Nenhum dado encontrado ou erro na API');
                     proximaAtualizacao = setTimeout(() => atualizarGrafico(idleitura, dados), 5000);
-                });
-            } else {
-                console.error('Nenhum dado encontrado ou erro na API');
-                proximaAtualizacao = setTimeout(() => atualizarGrafico(idleitura, dados), 5000);
-            }
-        })
+                }
+            })
             .catch(function (error) {
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
@@ -244,5 +252,4 @@
     setInterval(() => {
         sendData();
     }, 2000);
-
 </script>
