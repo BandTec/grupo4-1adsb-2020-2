@@ -44,7 +44,7 @@
 	</style>
 </head>
 
-<body onload="atualizacaoPeriodica()">
+<body onload="atualizacaoPeriodica(), verificar_autenticacao()">
 	<!--HEADER-->
 
 	<div class="header">
@@ -79,7 +79,7 @@
 
 				<h1 class="title">Temperaturas(ºC) - Todos setores </h1>
 
-				<a style="color: black;" href="tela1.html">
+				<a style="color: black; text-decoration: none;" href="tela1.html">
 					<div id="div_alerta_temperatura" class="temperatura1 normal">
 						<p name="nameleitura" id="idleitura" value="1">Marcos Santos</p>
 						<h2 id="div_temperatura">0º</h2>
@@ -88,7 +88,7 @@
 				</a>
 
 
-				<a style="color: black;" href="tela2.html">
+				<a style="color: black; text-decoration: none;" href="tela2.html">
 					<div id="div_alerta_temperatura2" class="temperatura1 normal">
 						<p name="nameleitura" id="idleitura" value="2">Maria Clara Silva</p>
 						<h2 id="div_temperatura2">0°</h2>
@@ -96,7 +96,7 @@
 					</div>
 				</a>
 
-				<a style="color: black;" href="tela3.html">
+				<a style="color: black; text-decoration: none;" href="tela3.html">
 					<div id="div_alerta_temperatura3" class="temperatura1 normal">
 						<p name="nameleitura" id="idleitura" value="3">Rogerio Souza </p>
 						<h2 id="div_temperatura3">0°</h2>
@@ -105,7 +105,7 @@
 				</a>
 
 
-				<a style="color: black;" href="tela4.html">
+				<a style="color: black; text-decoration: none;" href="tela4.html">
 					
 					<div id="div_alerta_temperatura4" class="temperatura1 normal">
 						<p name="nameleitura" id="idleitura" value="4"> Evandro Costa</p>
@@ -529,13 +529,6 @@
 		'&ref=' + encodeURIComponent(document.URL);
 	document.body.appendChild(ttChatLoaderS);
 	//]]>
-
-
-
-	// let usuario;
-
-	// verificar_autenticacao();
-
 
 
 	// só mexer se quiser alterar o tempo de atualização
