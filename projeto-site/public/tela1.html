@@ -46,24 +46,25 @@
 
         <div class="nav">
             <ul>
-                <li><a id="login" href="login.html"> <img src="img/login.png" alt=""></a></li>
-
+                <li><a  href="dashboard_chart.html"> <button class="btn_voltar">VOLTAR</button> </a></li>
+                <button class="btn" onclick="chamargraficos(1)">HISTÓRICO DE TEMP</button>
             </ul>
         </div>
         <!--Fim do Header-->
 
-<div class="fundo">
-    <a href="dashboard_chart.html"><button id="voltar">voltar</button></a><br>
+
+   
 
     <div class="perfil">
-        <img  src="img/Pessoa1.2.jpg">
+        <img style="  border :#1a8686 solid 5px;" src="img/Pessoa1.2.jpg">
         <p><b>Funcionário:</b> Marcos Santos</p>
+    </div>
+
+    <div class="dados_perfil">
         <p><b>Setor:</b> 1</p>
         <p><b>Tipo Sanguíneo:</b> O-</p>
         <p><b>Data de nascimento:</b> 12/08/1993</p>
-        <button class="btn" onclick="chamargraficos(1)">Temperatura</button>
     </div>
-
 
     
 
@@ -73,7 +74,7 @@
             <canvas id="canvas_grafico"></canvas>
         </div>
     </div>
-</div>
+
 </body>
 
 </html>

@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
 }
 
+body{
+font-family: Roboto;
+}
 .fundo {
    /* background-color: #2EC4B6;*/
     /* background-image: url(img/Fundo_perfil_dash.jpg); */
@@ -17,7 +22,6 @@
 .header img {
     width: 350px;
     background-size: cover;
-    padding: 20px 0 0 30px;
     
 }
 .img_funcionario {
@@ -45,12 +49,64 @@
     font-size: 28px;
 
 }
-
- .nav img {
-    width: 45px;
-    padding-left:50px;
+.btn_voltar{
+    font-size: 25px;
+    width: 150px;
+    height: 60px;
+    text-align: center;
+    border:none;
+    background-color: #00548b;
+    cursor: pointer;
+    color: white;
 }
+.btn_voltar:hover{
+    background-color: #21c7c7;
+    border-color:  #162c2c;
+}
+ .perfil{
+     background-color:  #21c7c7de;
+     width: 400px;
+     text-align: center;
+     margin: 0 auto;
+     border-radius: 8px;
+ }
+.perfil img{
 
+    width: 300px;
+    margin-top: 37px;
+    border-radius: 5px;
+    border-color: #1a8686;
+    
+}
+.perfil p {
+    font-size: 30px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.dados_perfil p {
+    font-size: 25px;
+    /* margin-top: 20px; */
+    font-weight: 400px;
+}
+.dados_perfil{
+    background-color: #21c7c7;
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 29px;
+    border-radius: 5px;
+
+}
+.btn{
+    font-size: 25px;
+    width: 150px;
+    height: 60px;
+    text-align: center;
+    border:none;
+    background-color: #00548b;
+    cursor: pointer;
+    color: white;
+}
 
 .dashboard{
     float: right;
