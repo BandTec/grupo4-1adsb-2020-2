@@ -31,11 +31,12 @@
                     <input name="senha" type="password" class="form-input" required placeholder="insert password">
                 </div>
                 <button id="btn_entrar" class="btn_login">Entrar</button>
+                <img src="img/loading.gif" id="img_aguarde2" style="display: none; width: 100px; margin-left: 50px;">
+               
             </form>
-            <div id="div_erro" class="msg_erro">
+            <div id="div_erro2">
             </div>
-
-            <img src="img/loading.gif" id="img_aguarde" style="display: none;">
+          
         </div>
         <!--Fim do login-->
 
@@ -71,13 +72,14 @@
                     <p id="numero">*Sua senha precisa conter um número*.</p>
                 </div>
                 </div>
-                <input id="btn_entrar" type="submit" class="btn_login" value="Cadastrar">
-            </form>
-            <img src="img/loading.gif" id="img_aguarde" style="display: none; width:100px">
+                <input id="btn_cadastrar" type="submit" class="btn_login" value="Cadastrar">
+                <img src="img/loading.gif" id="img_aguarde" style="display: none; width:100px; margin-left: 50px;">
 
-            <div id="div_erro" style="background-color: black; color: cyan; display: none;">
-                Erro no cadastro
-            </div>
+                <div id="div_erro" style="background-color: black; color: cyan; display: none;">
+                    Erro no cadastro
+                </div>
+            </form>
+           
 
         </div>
     </div>
@@ -195,7 +197,7 @@
     //]]>
 
     function cadastrar() {
-         //aguardar();
+         aguardar();
         var formulario = new URLSearchParams(new FormData(form_cadastro));
         fetch("/usuarios/cadastrar", {
             method: "POST",
@@ -222,7 +224,7 @@
 
 
     function entrar() {
-        //aguardar();
+        aguardar2();
         var formulario = new URLSearchParams(new FormData(form_login));
         fetch("/usuarios/autenticar", {
             method: "POST",
@@ -245,7 +247,7 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizar_aguardar(texto);
+                    finalizar_aguardar2(texto);
                 });
             }
         });
@@ -254,15 +256,31 @@
     }
 
     function aguardar() {
-        btn_entrar.disabled = true;
+        btn_cadastrar.disabled = true;
         img_aguarde.style.visibility = 'visible';
+        img_aguarde.style.display ="block";
         div_erro.style.visibility = 'hidden';
     }
 
     function finalizar_aguardar(resposta) {
-        btn_entrar.disabled = false;
+        btn_cadastrar.disabled = false;
         img_aguarde.style.visibility = 'hidden';
         div_erro.style.visibility = 'visible';
         div_erro.innerHTML = resposta;
     }
+
+    function aguardar2() {
+        btn_entrar.disabled = true;
+        img_aguarde2.style.visibility = 'visible';
+        img_aguarde2.style.display ="block";
+        div_erro2.style.visibility = 'hidden';
+    }
+
+    function finalizar_aguardar2(resposta) {
+        btn_cadastrar.disabled = false;
+        img_aguarde2.style.visibility = 'hidden';
+        div_erro.style.visibility = 'visible';
+        div_erro.innerHTML = resposta;
+    }
+
 </script>
