@@ -1,69 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
 }
-.fundo {
-    background-color: rgb(23, 124, 124);
-    height: 1000px;
+
+.temperaturaGerais a{
+    color: black;
+    text-decoration: none;
 }
-img {
+
+body {
+    font-family: Roboto;
+}
+
+.fundo {
+    /* background-color: #2EC4B6;*/
+    /* background-image: url(img/Fundo_perfil_dash.jpg); */
+    background-size: cover;
+    height: 900px;
+}
+
+/*Header*/
+.header {
+    background-color: #fff;
+}
+
+.header img {
+    width: 350px;
+    background-size: cover;
+    padding: 25px;
+
+
+}
+
+.img_funcionario {
     height: 250px;
-    border-color: rgb(12, 102, 102);
+    border-color: #2ec4b6;
     border-style: solid;
     margin: 50px 50px 20px 50px;
     border-radius: 10px;
+
 }
-.perfil {
-    background-color: rgb(214, 233, 235);
-    width: 450px;
-    height: 500px;
-    float: left;
+
+.nav {
+    float: right;
+    margin-right: 50px;
+    padding-top: 30px;
+}
+
+.nav li {
+    display: inline-block;
+    padding: 40px 30px 0 20px;
+    font-size: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 28px;
+
+}
+
+.btn_voltar {
+    font-size: 25px;
+    width: 150px;
+    height: 60px;
     text-align: center;
-    margin: 0px 100px 100px 150px;
-    border-radius: 50px;
-    font-size: 18px;
-    border-color: rgb(0, 0, 0);
-    border-style: solid;
-}
-button {
-    margin: 20px;
-    height: 30px;
-    width: 200px;
-    font-size: 18px;
-    background-color: white;
-    color: rgb(12, 102, 102);
-    transition: 0.3s;
+    border: none;
+    background-color: #00548b;
     cursor: pointer;
-    border-radius: 10px;
-    border-color: rgb(12, 102, 102);
-    border-style: solid;
-}
-button:hover{
-background-color: rgb(12, 102, 102);
-color: white;
-border-color: rgb(255, 255, 255);
-
-}
-p {
-    text-align: justify;
-    margin: 0 0 0 100px;
-}
-#voltar {
-    margin: 50px;
-    height: 30px;
-    width: 100px;
-    font-size: 18px;
-    background-color: white;
-    color: rgb(12, 102, 102);
-    transition: 0.3s;
-    cursor: pointer;
-    border-radius: 10px; 
-    border-color: rgb(12, 102, 102);
-    border-style: solid;
-
-}
-#voltar:hover{
-    background-color: rgb(12, 102, 102);
     color: white;
-    border-color: rgb(255, 255, 255);
-    }
+}
+
+.btn_voltar:hover {
+    background-color: #21c7c7;
+    border-color: #162c2c;
+}
+
+#nomeTitulo{
+    font-size:40px;
+    padding-top: 20px;
+}
+
+.perfil {
+    background-color: #21c7c7de;
+    width: 400px;
+    text-align: center;
+    margin-left: 40px;
+    border-radius: 8px;
+    float: left;
+    margin-bottom: 80px;
+    padding-bottom: 40px;
+}
+
+.dados{
+    text-align: left;
+    margin-left: 50px;
+}
+
+.perfil img {
+    width: 300px;
+    margin-top: 37px;
+    border-radius: 5px;
+    border-color: #1a8686;
+}
+
+.perfil p {
+    font-size: 25px;
+}
+
+.btn {
+    font-size: 25px;
+    width: 150px;
+    height: 60px;
+    text-align: center;
+    border: none;
+    background-color: #00548b;
+    cursor: pointer;
+    color: white;
+ 
+}
+
+.btn-historico{
+    width: 270px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+.btn-historico:hover{
+    background-color:#0c7494 ;
+}
+
+.dashboard {
+    width: 1200px;
+    height: 700px;
+    border-radius: 5px;
+    border: 4px solid #21c7c7de;
+    background-color: white;
+    text-align: center;
+    margin-left: 600px;
+    margin-bottom: 200px;
+}
+
+#div_aguarde {
+    font-size: 30px;
+    padding-top: 60px;
+}
+
+
+.footer {
+    background-color: #00548b;
+    height: 100px;
+}
+

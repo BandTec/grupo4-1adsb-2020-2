@@ -7,11 +7,16 @@ https://codewithhugo.com/sequelize-data-types-a-practical-guide/
 
 module.exports = (sequelize, DataTypes) => {
     let Leitura = sequelize.define('Leitura',{	
-		idleitura: {
-			field: 'idleitura',
+		id: {
+			field: 'id',
 			type: DataTypes.INTEGER,
 			primaryKey: true,
 			autoIncrement: true
+		},	
+		idleitura: {
+			field: 'idleitura',
+			type: DataTypes.INTEGER,
+			autoIncrement: false
 		},	
 		temperatura: {
 			field: 'temperatura',
