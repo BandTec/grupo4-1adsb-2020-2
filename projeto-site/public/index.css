@@ -80,10 +80,19 @@ body {
     font-size: 28px;
 
 }
+.nav a:hover {
+    color: rgb(170, 170, 170);
+
+}
 
 .nav img {
     width: 45px;
     padding-left: 30px;
+}
+
+.nav img:hover {
+    border-color: black;
+    border-width: 0 0 2px 0;
 }
 
 /*fim do nav*/
@@ -317,7 +326,6 @@ padding-bottom: 30px;
     padding:200px 0 0 100px;
 
 }
-
 
 /*Fim História*/
 

@@ -145,6 +145,10 @@ body {
     
 }
 
+.container form .form-input:hover {
+    background-color: rgb(197, 197, 197);
+}
+
 .form-group {
     padding: 10px 60px;
 }
