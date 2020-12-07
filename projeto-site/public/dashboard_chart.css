@@ -188,6 +188,26 @@ h3 {
     display: flex;
     margin-top: 40px;
 }
+.legenda {
+    float: left;
+    margin: 0px 0px 100px 100px;
+    font-size: 24px;
+}
+#vermelho{
+    background-color: rgb(219, 59, 59);
+    width: 30px;
+    height: 30px;
+}
+#verde{
+    background-color: #22d422;
+    width: 30px;
+    height: 30px;
+}
+#azul {
+    background-color: rgb(34, 174, 192);
+    width: 30px;
+    height: 30px;
+}
 
 /*footer*/
 
