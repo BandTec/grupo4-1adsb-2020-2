@@ -14,7 +14,7 @@ body {
 /*Header*/
 .header {
     background-image: url(img/back2.jpg);
-    max-height: 1500px;
+    height: 1500px;
     background-size: cover;
 }
 
@@ -41,9 +41,6 @@ body {
     padding-top: 30px;
     ;
 }
-
-
-
 
 /*nav*/
 
