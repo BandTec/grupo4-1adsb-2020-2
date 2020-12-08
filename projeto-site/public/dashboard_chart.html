@@ -24,7 +24,7 @@
         }
 
         .alerta-baixo {
-            background-color: rgb(34, 174, 192);
+            background-color: rgb(131, 99, 221);
 
         }
 
@@ -64,10 +64,12 @@
 		</h2>
 	</div>
 <div class="legenda">
-	<button id="vermelho"></button> <b>  Temperatura alta</b><br><br>
-	<button id="verde"></button><b>  Temperatura adequada</b><br><br>
-	<button id="azul"></button><b>  Temperatura baixa</b>
-</div>
+	<span><button id="vermelho"></button> <b>  Temperatura alta</b></span>
+	
+	<span><button id="verde"></button><b>  Temperatura adequada</b></span>
+	
+	<span><button id="azul"></button><b>  Temperatura baixa</b></span></div>
+
 
 	<div>
 		<select id="setorSeletor" onchange="mudarSetor()" class="selectSetores">
@@ -485,6 +487,7 @@
 </html>
 
 <script>
+	
 	setorSeletor.value = "criticos";
 	// função da select dos setores
 	function mudarSetor() {

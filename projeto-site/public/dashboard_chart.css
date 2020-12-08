@@ -47,7 +47,7 @@ body {
 /*Header*/
 .header {
   
-    height: 400px;
+    height: 200px;
 }
 
 .header img {
@@ -188,15 +188,16 @@ h3 {
     display: flex;
     margin-top: 40px;
 }
-.legenda {
-    float: left;
-    margin: 0px 0px 100px 100px;
+.legenda span{
+    display: inline block;
     font-size: 24px;
+    padding: 20px;
 }
+
 #vermelho{
     background-color: rgb(219, 59, 59);
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 #verde{
     background-color: #22d422;
@@ -204,7 +205,7 @@ h3 {
     height: 30px;
 }
 #azul {
-    background-color: rgb(34, 174, 192);
+    background-color: rgb(131, 99, 221);
     width: 30px;
     height: 30px;
 }
@@ -214,7 +215,7 @@ h3 {
 .footer {
     background-color: turquoise;
     height: 100px;
-    margin-top: 120px;
+    margin-top: 250px;
     text-align: center;
 }
 
