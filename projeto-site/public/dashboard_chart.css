@@ -215,6 +215,18 @@ h3 {
     background-color: turquoise;
     height: 100px;
     margin-top: 120px;
+    text-align: center;
+}
+
+.footer ul{
+    list-style: none;
+    padding-top:30px;
+}
+
+.footer a{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
 }
 
 /*fim do footer*/
