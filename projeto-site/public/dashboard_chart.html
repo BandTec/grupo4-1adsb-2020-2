@@ -15,20 +15,20 @@
 		/* Classes CSS para exemplos de alertas */
 
 		.normal {
-            background-color: #22d422;
-        }
+			background-color: #22d422;
+		}
 
-        .alerta-alto {
-            background-color: rgb(219, 59, 59);
+		.alerta-alto {
+			background-color: rgb(219, 59, 59);
 
-        }
+		}
 
-        .alerta-baixo {
-            background-color: rgb(131, 99, 221);
+		.alerta-baixo {
+			background-color: rgb(131, 99, 221);
 
-        }
+		}
 
-		.selectSetores{
+		.selectSetores {
 			width: 300px;
 			background: rgb(36, 193, 214);
 			color: black;
@@ -39,36 +39,36 @@
 			margin-left: 1500px;
 		}
 
-		.title{
+		.title {
 			font-size: 40px;
 		}
 	</style>
 </head>
 
-<body onload="atualizacaoPeriodica(), verificar_autenticacao()"> 
+<body onload="atualizacaoPeriodica(), verificar_autenticacao()">
 	<!--HEADER-->
 
 	<div class="header">
 		<a href="login.html"></a>
 		<a href="index.html"><img src="img/logo_home_color_dark.png" alt=""></a>
-		
 
-			<nav class="nav">
-				<ul>
-					<li>
-						<p>OLÁ <b id="b_usuario"></b></p>
-					</li>
-					<li><a href="#"  onclick="logoff()">LOGOUT</a></li>
-				</ul>
-			</nav>
+
+		<nav class="nav">
+			<ul>
+				<li>
+					<p>OLÁ <b id="b_usuario"></b></p>
+				</li>
+				<li><a href="#" onclick="logoff()">LOGOUT</a></li>
+			</ul>
+		</nav>
 		</h2>
 	</div>
-<div class="legenda">
-	<span><button id="vermelho"></button> <b>  Temperatura alta</b></span>
-	
-	<span><button id="verde"></button><b>  Temperatura adequada</b></span>
-	
-	<span><button id="azul"></button><b>  Temperatura baixa</b></span></div>
+	<div class="legenda">
+		<span><button id="vermelho"></button> <b> Temperatura alta</b></span>
+
+		<span><button id="verde"></button><b> Temperatura adequada</b></span>
+
+		<span><button id="azul"></button><b> Temperatura baixa</b></span></div>
 
 
 	<div>
@@ -113,7 +113,7 @@
 
 
 				<a style="color: black; text-decoration: none;" href="tela4.html">
-					
+
 					<div id="div_alerta_temperatura4" class="temperatura1 normal">
 						<p name="nameleitura" id="idleitura" value="4"> Evandro Costa</p>
 						<h2 id="div_temperatura4">0°</h2>
@@ -328,7 +328,7 @@
 					<span><b>Setor 2</b></span>
 				</div>
 
-				
+
 			</div>
 
 
@@ -353,6 +353,52 @@
 					<p>Tania Costa</p>
 					<h2>35°</h2>
 					<span><b>Setor 1</b></span>
+				</div>
+				<div class="temperatura1 alerta-baixo">
+					<p>Thiago Bonacelli</p>
+					<h2>34°</h2>
+					<span><b>Setor 1</b></span>
+				</div>
+				<div class="temperatura1 alerta-alto">
+					<p>Gustavo Jesus</p>
+					<h2>39°</h2>
+					<span><b>Setor 2</b></span>
+				</div>
+
+
+				<div class="temperatura1 alerta-alto">
+					<p>Julia Ribeiro</p>
+					<h2>42.3°</h2>
+					<span><b>Setor 2</b></span>
+				</div>
+
+				<div class="temperatura1 alerta-alto">
+					<p>Claudia Santos</p>
+					<h2>39°</h2>
+					<span><b>Setor 2</b></span>
+				</div>
+				<div class="temperatura1 alerta-baixo">
+					<p>Vivian Silva</p>
+					<h2>34°</h2>
+					<span><b>Setor 2</b></span>
+				</div>
+
+				<div class="temperatura1 alerta-alto">
+					<p>Cida Moura</p>
+					<h2>39.7°</h2>
+					<span><b>Setor 2</b></span>
+				</div>
+
+				<div class="temperatura1 alerta-baixo">
+					<p>João Silva</p>
+					<h2>34°</h2>
+					<span><b>Setor 2</b></span>
+				</div>
+
+				<div class="temperatura1 alerta-alto">
+					<p>Kaline Barreira</p>
+					<h2>40°</h2>
+					<span><b>Setor 2</b></span>
 				</div>
 
 
@@ -476,9 +522,11 @@
 		</div>
 	</div>
 	<!--footer-->
-	<div class="footer" >
+	<div class="footer">
 		<ul>
-			<li><a target="_blank" href="https://drive.google.com/file/d/1Us3ATLb40wee5Whz3-aquOQb2WKFgLtB/view?usp=sharing">Manual de instalação <img src="img/donwload.png" style="width: 30px;"></a></li>
+			<li><a target="_blank"
+					href="https://drive.google.com/file/d/1Us3ATLb40wee5Whz3-aquOQb2WKFgLtB/view?usp=sharing">Manual de
+					instalação <img src="img/donwload.png" style="width: 30px;"></a></li>
 		</ul>
 	</div>
 	<!--footer finish-->
@@ -487,43 +535,42 @@
 </html>
 
 <script>
-	
 	setorSeletor.value = "criticos";
 	// função da select dos setores
 	function mudarSetor() {
 		let seletor = document.getElementById("setorSeletor").value;
-		if(seletor == "criticos"){
+		if (seletor == "criticos") {
 			setorCritico.style.display = "block";
 			temperaturaGeral.style.display = "none";
 			setor1.style.display = "none";
 			setor2.style.display = "none";
 		}
-		 if(seletor == "setor1"){
+		if (seletor == "setor1") {
 			setorCritico.style.display = "none";
 			temperaturaGeral.style.display = "none";
 			setor1.style.display = "block";
 			setor2.style.display = "none";
 		}
-		 if(seletor == "setor2"){
+		if (seletor == "setor2") {
 			setorCritico.style.display = "none";
 			temperaturaGeral.style.display = "none";
 			setor1.style.display = "none";
 			setor2.style.display = "block";
 		}
-		 if(seletor == "todosSetores"){
+		if (seletor == "todosSetores") {
 			setorCritico.style.display = "none";
 			temperaturaGeral.style.display = "block";
 			setor1.style.display = "none";
 			setor2.style.display = "none";
 		}
-		if(seletor == ""){
+		if (seletor == "") {
 			setorCritico.style.display = "none";
 			temperaturaGeral.style.display = "block";
 			setor1.style.display = "none";
 			setor2.style.display = "none";
 		}
 
-		
+
 	}
 
 	// <![CDATA[ 
